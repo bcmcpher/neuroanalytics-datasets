@@ -31,6 +31,10 @@ parts:
   - caption: Research Methods
     chapters:
     - file: deep-learning.md
+  - caption: Research Tools
+    chapters:
+    - file: containers.md
+    - file: brainstorm.md
   - caption: Data Portals
     chapters:
     - file: open-neuro.md
@@ -44,3 +48,6 @@ parts:
     - file: markdown.md
     - file: notebooks.ipynb
     - file: markdown-notebooks.md
+  - caption: Appendix
+    chapters:
+    - file: README.md

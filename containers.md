@@ -390,3 +390,15 @@ ensure security and resource management:
 | Interactive (`-it`) | Shell | `apptainer shell` |
 | Security/Isolation | Containment | `-C` or `-e` |
 | Temp Files | Dedicated Work Directory | `-W ${SLURM\_TMPDIR}` |
+
+## References
+
+- https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/
+- https://docs.docker.com/docker-hub/quickstart
+- https://docs.docker.com/reference/dockerfile/
+- https://docs.docker.com/desktop/
+- https://docs.docker.com/guides/jupyter/
+
+- https://docs.alliancecan.ca/wiki/Apptainer
+- https://apptainer.org/docs/user/main/build_a_container.html
+- https://apptainer.org/docs/user/main/persistent_overlays.html

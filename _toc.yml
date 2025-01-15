@@ -34,6 +34,7 @@ parts:
   - caption: Research Tools
     chapters:
     - file: containers.md
+    - file: git-overview.md
     - file: brainstorm.md
   - caption: Data Portals
     chapters:

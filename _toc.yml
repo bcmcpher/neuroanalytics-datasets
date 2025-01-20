@@ -35,6 +35,7 @@ parts:
     chapters:
     - file: containers.md
     - file: git-overview.md
+    - file: git-examples.md
     - file: brainstorm.md
   - caption: Data Portals
     chapters:

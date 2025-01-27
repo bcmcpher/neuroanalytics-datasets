@@ -20,6 +20,7 @@ parts:
     - file: abcd.md
     - file: adni.md
     - file: prevent-ad.md
+    - file: ukbb.md
   - caption: Research Topics
     chapters:
     - file: dementia.md

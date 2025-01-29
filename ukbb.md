@@ -86,3 +86,21 @@ features of the RAP are:
   external storage costs while enhancing data security.
 - **Seamless collaboration** – share analyses and datasets with
   colleagues within a secure environment.
+
+## Tools for working with UKBB
+
+### A *MyST*ical article for UKBB Scaling Reports
+
+https://github.com/SIMEXP/ukbb_scaling_reports
+
+This is an example of a structured article that can be managed as a
+git repository. The code cotained within is a reproducible analysis
+that can be easily evaluated on a subset of the UKBB data.
+
+### UKBB Parser
+
+https://github.com/USC-IGC/ukbb_parser
+
+The UKBB uses a relatively dense coding convention for mapping the
+many behavioral variables they provide. This tool provides a pythonic
+way of seclecting and parsing the desired variables using these codes.

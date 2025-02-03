@@ -39,6 +39,7 @@ parts:
     - file: git-examples.md
     - file: code-environments.md
     - file: performant-computing.md
+    - file: compute-canada.md
     - file: brainstorm.md
   - caption: Data Portals
     chapters:

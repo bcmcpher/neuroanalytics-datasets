@@ -49,7 +49,7 @@ without conflicts.
 	implementations). The hierarchy prevents naming conflicts when
 	supporting many versions of complex software.
 
-##### Key Usage and Best Practices
+#### Key Usage and Best Practices
 
 To integrate modules into your analysis workflow, the Alliance
 recommends specific practices, especially when submitting
@@ -161,11 +161,18 @@ The most important feature are:
 
 #### Job Arrays
 
-Job arrays, also known as task arrays, are a powerful feature of the Slurm Workload Manager used on the Digital Research Alliance of Canada (the Alliance) clusters. They allow you to submit an entire set of similar jobs with a single command, which is particularly useful for workflows involving **running many similar jobs**.
+Job arrays, also known as task arrays, are a powerful feature of the
+Slurm Workload Manager used on the Digital Research Alliance of Canada
+(the Alliance) clusters. They allow you to submit an entire set of
+similar jobs with a single command, which is particularly useful for
+workflows involving **running many similar jobs**.
 
 ##### How Job Arrays Work
 
-A job array submits multiple instances of the same job script. The individual jobs within the array are differentiated by an environment variable: `$SLURM\_ARRAY\_TASK\_ID$`. This variable is set to a unique value for each instance (task) of the job.
+A job array submits multiple instances of the same job script. The
+individual jobs within the array are differentiated by an environment
+variable: `$SLURM\_ARRAY\_TASK\_ID$`. This variable is set to a unique
+value for each instance (task) of the job.
 
 Job arrays are beneficial in situations such as:
 
@@ -176,18 +183,21 @@ Job arrays are beneficial in situations such as:
 
 ##### Creating and Submitting a Job Array
 
-You define a job array using the `#SBATCH --array` directive in your submission script.
+You define a job array using the `#SBATCH --array` directive in your
+submission script.
 
 1. Defining the Array Range
 
-The `--array` directive specifies the range of task IDs that will be executed.
+The `--array` directive specifies the range of task IDs that will be
+executed.
 
-For example, to create 10 tasks with `$SLURM\_ARRAY\_TASK\_ID$` ranging from 1 to 10, you would use:
-`#SBATCH --array=1-10`
+For example, to create 10 tasks with `$SLURM\_ARRAY\_TASK\_ID$`
+ranging from 1 to 10, you would use: `#SBATCH --array=1-10`
 
 2. Example Job Array Script
 
-In your job script, you use the `$SLURM\_ARRAY\_TASK\_ID$` variable to control the execution path or input files for each distinct task.
+In your job script, you use the `$SLURM\_ARRAY\_TASK\_ID$` variable to
+control the execution path or input files for each distinct task.
 
 A minimal example script (`array\_job.sh`) demonstrating 10 tasks running the application `./myapplication` is:
 ```bash
@@ -201,22 +211,40 @@ The application `./myapplication` would run 10 times, receiving task IDs from 1 
 
 #### 3. Job Limits
 
-Note that on clusters like Graham and Béluga, there may be a limit on the number of jobs you can have in the system at one time (e.g., 1000 jobs, queued and running). **Each task of a job array counts as one job** towards this limit.
+Note that on clusters like Graham and Béluga, there may be a limit on
+the number of jobs you can have in the system at one time (e.g., 1000
+jobs, queued and running). **Each task of a job array counts as one
+job** towards this limit.
 
 ### Using Job Arrays for Long-Running Computations (Restarts)
 
-Job arrays can also be used to automatically restart computations that exceed the maximum time limit of the cluster (up to 7 days on general-purpose clusters like Fir, Narval, Nibi, and Rorqual). This requires the application to support **checkpointing** (saving state to a file).
+Job arrays can also be used to automatically restart computations that
+exceed the maximum time limit of the cluster (up to 7 days on
+general-purpose clusters like Fir, Narval, Nibi, and Rorqual). This
+requires the application to support **checkpointing** (saving state to
+a file).
 
-The `--array=1-100%10` syntax can be used to submit a collection of identical jobs with the condition that **only one job of the array will run at any given time**. The script should be designed to ensure that the last checkpoint file is used to restart the calculation for the next job.
+The `--array=1-100%10` syntax can be used to submit a collection of
+identical jobs with the condition that **only one job of the array
+will run at any given time**. The script should be designed to ensure
+that the last checkpoint file is used to restart the calculation for
+the next job.
 
-For example, splitting a simulation into 10 sequential chunks using a job array, ensuring only one runs at a time:
-`#SBATCH --array=1-10%1`
+For example, splitting a simulation into 10 sequential chunks using a
+job array, ensuring only one runs at a time: `#SBATCH --array=1-10%1`
 
-The script would use a test to check for the existence of a checkpoint file (`state.cpt`) to either restart the simulation or start a new one.
+The script would use a test to check for the existence of a checkpoint
+file (`state.cpt`) to either restart the simulation or start a new
+one.
 
 ### Further Documentation
 
-For more detailed documentation, you should refer to the documentation on **Job arrays** and **Job Array Support**. Automating job submission via job arrays is one technique provided, alongside tools like **META**, **GLOST**, and **GNU Parallel**, which can bundle many short computations into fewer tasks of longer duration to improve computational efficiency.
+For more detailed documentation, you should refer to the documentation
+on **Job arrays** and **Job Array Support**. Automating job submission
+via job arrays is one technique provided, alongside tools like
+**META**, **GLOST**, and **GNU Parallel**, which can bundle many short
+computations into fewer tasks of longer duration to improve
+computational efficiency.
 #### Optimizing Long-Running Analysis
 
 If your analysis is expected to run longer than the cluster time
@@ -230,11 +258,88 @@ limits (up to 7 days on general-purpose clusters), you must use
 
 ### 3. Submitting and Monitoring the Job
 
-#### A. Submission
+The primary way to interact with jobs on Digital Research Alliance of
+Canada (the Alliance) clusters is through the **Slurm Workload
+Manager** commands.
+
+Here are the basic commands for submitting, monitoring, and
+controlling your jobs:
+
+#### Submitting Jobs
+
+The command to submit a job script to the scheduler is `sbatch`.
+
+*   **`sbatch <script_name>`**: Submits a batch job script (e.g.,
+	`simple\_job.sh`) to the Slurm scheduler. This script must include
+	`#SBATCH` directives specifying necessary resources like `--time`
+	(time limit) and `--account` (Resource Allocation Project/Group
+	Name).
+*   **`sbatch --time=00:30:00 simple_job.sh`**: You can override
+	directives in the script by supplying them as command-line
+	arguments to `sbatch`.
+
+#### Monitoring Running and Pending Jobs
+
+You can check the status of jobs using two primary commands: `squeue`
+or the local customization `sq`. It is important **not to run these
+commands from a script** at a high frequency, as they add load to
+Slurm.
+
+*   **`sq`**: Lists only your own jobs.
+*   **`squeue -u $USER$`**: The general Slurm command to list only
+	your jobs, filtering by your username.
+*   **`squeue -u <username> -t RUNNING`**: Shows only jobs currently
+	in the **R** (Running) state for a specific user.
+*   **`squeue -u <username> -t PENDING`**: Shows only jobs currently
+	in the **PD** (Pending) state for a specific user.
+*   **`scontrol show job <jobid>`**: Shows detailed information for a
+	specific job ID.
+
+#### Cancelling Jobs
+
+To terminate or remove a job from the queue:
+
+*   **`scancel <jobid>`**: Cancels a specific job using its job ID.
+*   **`scancel -u $USER$`**: Cancels all jobs belonging to your user
+	ID.
+*   **`scancel -t PENDING -u $USER$`**: Cancels all pending jobs
+	belonging to your user ID.
+
+#### Viewing Completed Job Information
+
+Once a job is complete, you can review its performance:
+
+*   **`seff <jobid>`**: Provides a short summary of the CPU and memory
+	efficiency of a job, including the wall-clock time and efficiency
+	percentages.
+*   **`sacct -j <jobid>`**: Provides more detailed information about a
+	completed job. You can specify the output format using the
+	`--format` option, for example: `$ sacct -j <jobid>
+	--format=JobID,JobName,MaxRSS,Elapsed$.
+
+#### Running Interactive Jobs
+
+Interactive sessions on compute nodes are useful for tasks like
+debugging, data exploration, or compiling software:
+
+*   **`salloc`**: Starts an interactive session on a compute node,
+	reserving resources for the duration specified.
+*   Example: `$ salloc --time=1:0:0 --mem-per-cpu=3G --ntasks=1
+	--account=def-someuser$.
+
+#### Attaching to a Running Job
+
+You can connect to the node running a job to monitor or troubleshoot
+(e.g., running `htop` or `nvidia-smi`):
+
+*   **`srun --jobid <jobid> --pty <command>`**: Runs a process on the
+	node assigned to the specified running job ID.
+
+#### Submission
 Submit your job script using the `sbatch` command: `$ sbatch
 simple_job.sh`
 
-#### B. Monitoring
+#### Monitoring
 *   **Checking Status:** You can list your submitted jobs using the
 	customized utility `sq` or the general command `squeue -u
 	$USER$. The status column (`ST`) shows if a job is `PD` (pending)
@@ -246,3 +351,10 @@ simple_job.sh`
 	monitoring is needed, run an **interactive job** using `salloc`.
 *   **Efficiency:** After completion, you can check the efficiency of
 	the job's CPU and memory utilization using `seff <jobid>`.
+*   Visualizing Job Status with **Portail**: By accessing
+	https://portail.narval.calculquebec.ca/, you can recieve
+	visualizations about the resource usage of your job during its
+	processing. You will also recieve pretty clear warnings about not
+	utilizing a reasonable proportion of your requested resource if
+	you do not use enough of it. This is a *very* convenient resource
+	compared to many CLI resource tools.

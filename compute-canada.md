@@ -38,6 +38,75 @@ The process generally involves:
 	*   Being registered for **multifactor authentication** and having
 		your second factor available.
 
+## Connecting to DRAC
+
+To connect to the Digital Research Alliance of Canada (the Alliance)
+clusters, you must use **Secure Shell (SSH)**, which is the standard,
+secure, and encrypted method for executing commands, submitting jobs,
+checking job progress, and transferring files.
+
+Here is a description of how to use SSH to connect:
+
+### Prerequisites for Connection
+
+To connect successfully via SSH, you must have the following:
+
+1.  **Machine Name:** You need to know the name of the machine you
+	intend to connect to, which will look something like
+	`narval.computecanada.ca` or `beluga.computecanada.ca`.
+2.  **Username:** You must know your username, which is generally not
+	your CCI, CCRI (`abc-123-01`), or email address.
+3.  **Authentication:** You must either know your password (the same
+	one used to log in to the CCDB portal) or have an **SSH
+	key**. Using an SSH key is highly recommended for better security.
+4.  **Multifactor Authentication (MFA):** You must be registered for
+	multifactor authentication and have your second factor available.
+
+### Using the SSH Command Line
+
+On operating systems like **macOS** and **Linux**, the **OpenSSH**
+client is typically installed by default. On recent versions of
+**Windows**, SSH is available in PowerShell, the `cmd` prompt, or
+through the Windows Subsystem for Linux (WSL).
+
+To initiate the connection from a command-line client, use the `ssh`
+command with your username and the machine name:
+
+`$ ssh username@machine_name`
+
+For Windows users, third-party clients such as PuTTY, MobaXTerm,
+WinSCP, and Bitvise are also popular.
+
+### First-Time Connection and Host Keys
+
+The very first time you connect to a machine, the SSH client will ask
+you to store a copy of the machine's **host key**. This unique
+identifier allows your client to verify, upon subsequent connections,
+that you are connecting to the intended machine.
+
+### Enabling X11 for Graphical Applications
+
+If you need to run graphical applications (like interactive jobs for
+data exploration or certain software development) that rely on the X
+protocol (X11), you must:
+
+1.  Have an **X11 server** installed on your local computer (e.g.,
+	XQuartz for macOS or MobaXterm/VcXsrv for Windows).
+2.  Add the `-Y` option to your `ssh` command to enable X11
+	communications:
+
+`$ ssh -Y username@machine_name`
+
+### Connection Errors
+
+If you encounter connection errors like "remote host identification
+has changed," this could indicate either a security upgrade on the
+cluster or a man-in-the-middle attack. If this occurs, you should
+verify that the host key fingerprint matches one of the published host
+key fingerprints for the Alliance. If it matches, it is safe to
+proceed; otherwise, you should terminate the connection and contact
+technical support.
+
 ## Getting started on a project
 
 Projects on Digital Research Alliance of Canada (the Alliance) systems
@@ -103,7 +172,7 @@ to meet the allocation targets of all groups by calculating a job's
 priority based on the group's recent usage compared to its allocated
 usage.
 
-#### Billing and Resource Equivalents
+#### "Billing" and Resource Equivalents
 
 The scheduler calculates resource consumption not based on what the
 application actually used, but on the resources requested, because
@@ -261,9 +330,10 @@ general-purpose clusters, this directory is structured as
 
 #### Recommended Transfer Tool
 
-The Alliance strongly recommends using **[Globus](https://globus.alliancecan.ca/file-manager?two_pane=true)** for transferring
-substantial amounts of data to an Alliance cluster. You have to sign
-into DRAC to use this tool.
+The Alliance strongly recommends using
+**[Globus](https://globus.alliancecan.ca/file-manager?two_pane=true)**
+for transferring substantial amounts of data to an Alliance
+cluster. You have to sign into DRAC to use this tool.
 
 *   Globus is the preferred tool for transferring data between systems
 	due to its efficiency, reliability, and ability to recover from

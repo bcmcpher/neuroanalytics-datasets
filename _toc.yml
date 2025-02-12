@@ -41,6 +41,7 @@ parts:
     - file: performant-computing.md
     - file: compute-canada.md
     - file: hpc-jobs.md
+    - file: nipoppy.md
     - file: brainstorm.md
   - caption: Data Portals
     chapters:

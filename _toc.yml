@@ -42,6 +42,9 @@ parts:
     - file: compute-canada.md
     - file: hpc-jobs.md
     - file: nipoppy.md
+    - file: mriqc.md
+    - file: fmriprep.md
+    - file: qsiprep.md
     - file: brainstorm.md
   - caption: Data Portals
     chapters:

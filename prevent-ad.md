@@ -33,6 +33,108 @@ family member affected by the disease.
 
 ## The Dataset
 
+The cohort selection process for the PREVENT-AD study, which was
+established in 2011, aimed to identify a population enriched for the
+risk of developing Alzheimer's disease (AD).
+
+The goal of the StoP-AD Centre, which developed the cohort, was to
+pursue innovative studies in the preclinical, or asymptomatic, phase
+of AD.
+
+### Target Population and Screening
+
+The PREVENT-AD cohort included **cognitively normal older
+individuals** who were at-risk due to a strong family history of
+sporadic AD. This family history is known to increase the risk of AD
+dementia by 2- to 3-fold.
+
+Between 2011 and 2017, the screening process involved the following
+steps and numbers:
+*   **Screening:** More than 1700 persons from the greater Montreal
+	area were screened.
+*   **On-site Eligibility Visit (EL00):** 692 screened persons
+	completed an on-site eligibility visit.
+*   **Baseline Visit (BL00):** 426 participants completed a baseline
+	visit.
+*   **Final Inclusion:** 387 participants were included in the cohort
+	for sustained investigation, or 386 participants met criteria for
+	sustained investigation.
+
+### Inclusion Criteria
+
+Participants had to meet the following criteria to be included in the
+cohort:
+
+1.  **Family History:** Self-reported parental or multiple-sibling
+	(two or more) history of Alzheimer-like dementia.
+	*   For the diagnosis of "AD-like dementia," investigators used
+		either a compelling AD diagnosis from an experienced clinician
+		or a structured questionnaire to establish memory or
+		concentration issues severe enough to cause disability, with
+		insidious onset and gradual progression.
+	*   A list notes that 8 participants had only 1 sibling affected
+		with AD-like dementia.
+2.  **Age:** They needed to be **60 years of age or older**. However,
+	individuals aged 55–59 years were eligible if their age was within
+	15 years of the age of symptom onset of their youngest-affected
+	first-degree relative.
+3.  **Education and Study Partner:** A minimum of 6 years of formal
+	education was required, and a study partner needed to be available
+	to provide information on cognitive status.
+4.  **Protocol Compliance:** Participants needed the ability and
+	intention to participate in regular visits, sufficient fluency in
+	French and/or English, and agreement for periodic donation of
+	biofluids (blood and urine) and periodic multimodal assessments
+	via MRI and Lumbar Puncture (LP). LP was initially optional but
+	became mandatory in 2017 for participation of new individuals.
+
+### Exclusion Criteria and Cognitive Screening
+
+The primary objective of the screening process was to ensure
+participants were **cognitively unimpaired (CU)**.
+
+1.  **Initial Screening:** At the eligibility visit, the **Montreal
+	Cognitive Assessment (MoCA)** and the **Clinical Dementia Rating
+	(CDR)** were administered to rule out cognitive impairment.
+2.  **Follow-up Assessment for Impairment:** If an individual scored
+	MoCA $\le 26$ or CDR $> 0$, an exhaustive neuropsychological
+	evaluation was performed by a clinician. A very small fraction of
+	these individuals were still enrolled if the evaluation confirmed
+	normal cognition.
+3.  **Baseline Confirmation:** At the baseline visit, the **Repeatable
+	Battery for the Assessment of Neuropsychological Status (RBANS)**
+	was performed. Participants whose scores fell below normative
+	values also needed to undergo an exhaustive neuropsychological
+	evaluation to confirm normal cognition, otherwise they were
+	excluded.
+4.  **Exclusions During Phase 1 Follow-up (2011–2017):** Generally,
+	participants who developed Mild Cognitive Impairment (MCI) during
+	follow-up visits were excluded from the study, with the exception
+	of those enrolled in the naproxen clinical trial (INTREPAD). Ten
+	participants were excluded between 2012 and 2017 due to cognitive
+	decline. (Note: This exclusion practice changed in Phase 2,
+	starting around 2016, where participants who developed MCI or
+	dementia were no longer excluded).
+5.  **Medical/Pharmacological Exclusions:** Exclusion criteria also
+	included known or identified cognitive disorders, current
+	alcohol/barbiturate/benzodiazepine abuse, and use of certain
+	medications such as acetyl-cholinesterase inhibitors, memantine,
+	certain doses of Vitamin E or aspirin, opiates, NSAIDs, or certain
+	anti-coagulants. Clinically significant liver/kidney disease,
+	anemia, and uncontrolled hypertension were also exclusionary.
+
+Final determination of eligibility was made by clinical consensus
+among study physicians, a research nurse, and a neuropsychologist.
+
+### Retrospective Data Sharing Consent
+
+Of the 387 participants included in the cohort, **348**
+retrospectively agreed to have their data shared openly with the
+neuroscience community following a restructuring of the StoP-AD Centre
+operations in 2017. A total of 373 participants were reached during
+this re-consent process, and 93% of those reached agreed to the
+sharing.
+
 ### INTREPID
 
 The cohort divided between individuals enrolled in the observational
@@ -121,6 +223,128 @@ Additionally, standard Clinical measures like the MOCA and UPDRS are
 also collected.
 
 Other scores and demographics are available as well.
+
+## Longitudinal Features
+
+The PREVENT-AD dataset's longitudinal neuroimaging acquisitions are
+divided into two distinct periods, Phase 1 (referred to as Stage 1)
+and Phase 2 (referred to as Stage 2), reflecting changes in funding,
+protocol, and available technologies.
+
+Here are the details regarding the characteristics of the longitudinal
+neuroimaging acquisitions and the differences between Phase 1 and
+Phase 2:
+
+## Overview of Phases
+
+| Feature | Phase 1 (Stage 1) (November 2011 to November 2017) | Phase 2 (Stage 2) (Starting late 2017/January 2019) |
+| :--- | :--- | :--- |
+| **Duration/Period** | November 2011 to November 2017. | Started after November 2017, with MRI scanning resuming in January 2019. |
+| **Funding/Structure** | Top-down, standard annual data collection structure. Supported by a \$13.5M public-private partnership. | Bottom-up structure where core data (e.g., RBANS) continued, but other assessments depended on **investigator-driven project grants**. |
+| **Scanner/Coil** | Siemens TIM Trio 3 Tesla MRI scanner. Standard **12-channel coil** generally used. | Siemens TIM Trio 3 Tesla MRI scanner upgraded to a **Prisma Fit**. Exclusively used the **32-channel head coil**. |
+| **Frequency** | Multi-modal MRI performed on an **annual basis**. | MRI scans were done, but **not necessarily performed on all participants and/or systematically every year**. |
+| **LP/CSF** | Lumbar puncture (LP) was **optional** initially, then proposed to the full cohort in 2016, and became **mandatory in 2017** for new participants. | LP and blood draws continued but were **not necessarily performed systematically every year**. |
+| **Exclusion Criteria** | Participants who developed Mild Cognitive Impairment (MCI) were generally **excluded** from the study. | Participants who developed MCI or dementia were **no longer excluded**; their cognitive performance is systematically reviewed. |
+| **New Modalities** | Focused primarily on MRI, cognitive, biofluid (including optional CSF) and neurosensory data. | Introduced A$\beta$ and tau **Positron Emission Tomography (PET)**, and **Magnetoencephalography (MEG)**. |
+
+### Phase 1 (Stage 1) Neuroimaging Acquisitions (2011–2017)
+
+Phase 1 neuroimaging primarily focused on Magnetic Resonance Imaging
+(MRI). Most MRI sequences (3T) were harmonized with the Alzheimer’s
+Disease Neuroimaging Initiative (ADNI) protocol to facilitate
+interoperability between cohorts.
+
+**Acquired Modalities (Standard Protocol):** The acquisitions were
+performed using a Siemens Tim Trio 3T scanner, typically with a
+standard 12-channel coil. The sequences included:
+
+*   **T1-weighted (T1w):** MPRAGE.
+*   **T2*-weighted**.
+*   **FLAIR** (Fluid-attenuated inversion recovery) images.
+*   **Diffusion MRI (DWI)**.
+*   **Arterial Spin Labeling (ASL)**.
+*   **Resting-state functional MRI (fMRI)** (Resting State BOLD).
+*   **Task fMRI:** An episodic memory fMRI task was performed for most
+	participants.
+
+**Protocol Change (Starting June 2016):** For participants enrolled
+between June 2016 and November 2017 (n=48), the protocol changed
+slightly, using a 32-channel coil:
+
+*   The **task fMRI was removed/replaced**.
+*   **MP2RAGE** was added for quantitative T1 maps.
+*   A **multi-echo gradient echo** was added for T2* maps.
+*   A **high in-plane resolution T2-weighted image** (T2-weighted
+	SPACE) was added to assess brain microstructure and segment
+	hippocampal subfields.
+
+### Phase 2 (Stage 2) Neuroimaging Acquisitions (Post-2017)
+
+The shift to Phase 2 operations in late 2017 necessitated changes,
+although core cognitive data collection continued. MRI scanning
+resumed in January 2019, utilizing the upgraded hardware and revised
+protocols.
+
+**MRI Protocol Updates:** When MRI scanning resumed in 2019, the 3T
+Siemens Tim Trio scanner had been upgraded to a **Prisma Fit**, and
+the 32-channel head coil was used exclusively. Key differences
+included changes to existing sequences:
+
+*   **fMRI changed from single- to multi-echo**.
+*   **Diffusion MRI changed from single shell to multi-shell**.
+*   Sequences acquired include 1mm$^3$ 3D T1-weighted MPRAGE,
+	0.6mm$^3$ 3D T2-weighted SPACE, 3mm$^3$ resting-state multi-echo
+	functional MRI, 1x1x3mm FLAIR, and multi-shell diffusion imaging.
+*   **FLAIR data were only acquired in 2019-2020** after the upgrade.
+
+**New Modalities Introduced:** Phase 2 expanded the neuroimaging scope
+significantly by adding Positron Emission Tomography (PET) and
+Magnetoencephalography (MEG).
+
+1.  **Positron Emission Tomography (PET):**
+	*   **Amyloid-beta (A$\beta$) PET** scans were collected (n=232
+		shared) using **$[^{18}\text{F}]\text{NAV}4694$**.
+	*   **Tau PET** scans were collected (n=229 shared) using
+		**$[^{18}\text{F}]\text{Flortaucipir}$**.
+	*   Scans were acquired on a high-resolution research tomograph
+		(HRRT) at the McConnell Brain Imaging Centre.
+
+2.  **Magnetoencephalography (MEG):**
+	*   **Resting-state MEG scans** were collected (n=114 shared),
+		usually on the same day as an A$\beta$ or tau PET scan.
+	*   MEG data were collected using a whole-head CTF MEG system.
+
+### Neuroimaging Analytic Measures
+
+Phase 2 also emphasized the sharing of **analytic neuroimaging
+measures** (data derivatives) computed by imaging experts, provided in
+CSV files to ease data usage.
+
+These analytical measures derived from **all MRI modalities** in Phase
+2 include:
+
+*   **Morphometric measurements** (cortical thickness, volume, surface
+	area) using FreeSurfer.
+*   **Machine learning derived measures** (brain parcellations,
+	indices of aging and AD) using NiChart.
+*   **Brain-wide functional connectivity matrices** from resting-state
+	fMRI.
+*   **Diffusion tensor imaging (DTI) measures** (diffusion properties
+	of white matter tracts) using TractoFlow and related pipelines.
+*   **White matter hyperintensity (WMH) volumes** derived from T1w,
+	T2w, and FLAIR images.
+*   **Regional Cerebral Blood Flow (CBF)** quantification from ASL
+	sequences.
+*   **Standardized Uptake Value Ratio (SUVR)** images and values for
+	A$\beta$ and tau PET scans.
+*   **Relative spectral power density estimates** across cortical
+	regions from MEG data.
+
+The overall transition from Phase 1 to Phase 2 represents a move from
+standardized annual multi-modal MRI and core clinical measures to a
+more flexible, investigator-driven data collection strategy that
+dramatically expanded the breadth of high-end biomarkers (PET, MEG,
+multi-shell dMRI) collected.
 
 ## CNS Projects
 

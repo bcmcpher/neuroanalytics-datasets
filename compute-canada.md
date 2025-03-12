@@ -92,10 +92,10 @@ protocol (X11), you must:
 
 1.  Have an **X11 server** installed on your local computer (e.g.,
 	XQuartz for macOS or MobaXterm/VcXsrv for Windows).
-2.  Add the `-Y` option to your `ssh` command to enable X11
+2.  Add the `-X` option to your `ssh` command to enable X11
 	communications:
 
-`$ ssh -Y username@machine_name`
+`$ ssh -X username@machine_name`
 
 ### Connection Errors
 
@@ -389,6 +389,105 @@ poorly:
 	not use Globus with the file integrity verification option), you
 	should verify the data is not corrupted, potentially by comparing
 	file sizes or using utilities like `cksum` or `md5sum`.
+
+## Long term data storage
+
+Storage quotas on DRAC systems limit both the total volume of data
+(disk space) and the total number of filesystem objects (inodes) a
+project can use. This is particularly important when dealing with
+datasets composed of many small files, common in fields like machine
+learning.
+
+### Storage Quotas and Inodes on Alliance Systems
+
+The Alliance clusters utilize a distributed filesystem, where storage
+is typically managed in shared locations like `/project` and
+`/scratch`.
+
+1.  **Storage Quota (Disk Space):** Allocations for storage are
+	managed by the **Resource Allocation Project (RAP)** and represent
+	the **maximum amount** of storage space a research group can use
+	exclusively.
+2.  **Filesystem Quotas (Inodes):** Beyond limiting total disk space,
+	Alliance cluster filesystems also limit the **number of filesystem
+	objects** that a project can store. Filesystem objects include
+	files, directories, and other metadata structures, often referred
+	to as **inodes**.
+
+### Problems Caused by Small Files
+
+When managing datasets that contain a **very large collection of small
+files** (e.g., hundreds of thousands or more, such as image datasets
+often found in machine learning), two primary problems arise:
+
+1.  **Quota Violation:** Collections of small files can quickly
+	exhaust the **filesystem quotas** (inode limits) on the clusters,
+	even if the total disk space used is modest.
+2.  **Performance Degradation:** Streaming lots of small files from
+	shared storage like `/project` or `/scratch` to a compute node can
+	significantly slow down your software due to the inherent
+	performance implications of distributed filesystems. Shared
+	storage is designed for storing and reading at low frequencies
+	(e.g., 1 large chunk every 10 seconds, rather than 10 small chunks
+	every second).
+
+### Mitigating Quota and Performance Limits
+
+To effectively manage these limitations, especially when dealing with
+large collections of small files, the Alliance recommends strategies
+focused on archival and local storage usage:
+
+#### 1. Archiving Small Files (Tarring Data)
+
+The primary method for mitigating inode limits and improving I/O
+performance is to combine collections of small files into **large
+single-file archives**.
+
+*   **Efficiency:** Most file transfer programs move one large file
+	much more efficiently than thousands of small files of equal total
+	size.
+*   **Method:** You should use `tar` to combine (archive) directories
+	or directory trees containing many small files.
+*   **Location:** Once archived, this consolidated data should be
+	stored in your shared project space (e.g.,
+	`/project/<group-name>`).
+
+#### 2. Utilizing Local Node Storage for Smaller Datasets
+
+For improved I/O performance, especially during machine learning
+tasks, you should avoid reading data continuously from the shared
+distributed filesystem.
+
+*   **Size Limit:** If your dataset is around **100 GB or less**, it
+	is recommended to **transfer it to the local storage of the
+	compute node** at the beginning of the job.
+*   **Performance Benefit:** This local storage is typically orders of
+	magnitude faster and more reliable than shared storage (home,
+	project, scratch).
+*   **Directory:** A temporary directory is available for each job at
+	`$SLURM\_TMPDIR$`, which is the location where this data transfer
+	should occur.
+
+#### 3. General Data Migration Clean-Up
+
+Before migrating or transferring data, performing general cleanup
+reduces the strain on quotas and speeds up the migration process:
+
+*   **Clean Up:** Delete unnecessary files, such as core dumps (e.g.,
+	`core.12345`) or intermediate compilation files, as moving less
+	data takes less time.
+*   **Compression:** Large files, especially text files, may benefit
+	from compression (using `tar` or `gzip`) before transfer, although
+	this requires balancing compression time against bandwidth
+	savings.
+
+#### 4. Avoiding SCP for `/project`
+
+When transferring files to the `/project` filesystems, it is
+recommended **against using `scp -r`** (recursive copy), as this can
+turn off the `setgid` bit, potentially leading to errors such as "Disk
+quota exceeded" if files are subsequently created within those
+directories.
 
 # References
 

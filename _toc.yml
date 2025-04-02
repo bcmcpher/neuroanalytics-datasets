@@ -54,6 +54,9 @@ parts:
     - file: brainlife.md
     - file: dandi.md
     - file: nightingale.md
+  - caption: External Resources
+    chapters:
+    - file: external.md
   - caption: Contributing Formatting and Files
     chapters:
     - file: markdown.md

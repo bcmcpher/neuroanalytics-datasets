@@ -28,6 +28,10 @@ I have extensive knowledge in handling both **structured** and **unstructured he
 ## Project
 
 The main objective of this project is to develop a **Seizure Monitoring System** that can detect and analyze epileptic activity. Epileptic seizures are caused by sudden bursts of electrical activity in the brain, often resulting from imbalances in neurotransmitter levels. These seizures can be triggered by various factors, and understanding their onset and progression is essential for accurate diagnosis and effective treatment.
+ 
+This project focuses on the detection of specific biomarker known as **"chirp"** in electrographic data. These biomarkers are consistently present during epileptic episodes and exhibit distinct frequency modulation patterns in the electrographic discharges. The identification of these patterns can serve as reliable indicators for advancing seizure detection technologies and improving patient outcomes.
+
+The main objective of this project is to develop a **Seizure Monitoring System** that can detect and analyze epileptic activity. Epileptic seizures are caused by sudden bursts of electrical activity in the brain, often resulting from imbalances in neurotransmitter levels. These seizures can be triggered by various factors, and understanding their onset and progression is essential for accurate diagnosis and effective treatment.
 
 This project focuses on the detection of specific biomarkers known as **"chirp"** in electrographic data. These biomarkers are consistently present during epileptic episodes and exhibit distinct frequency modulation patterns in the electrographic discharges. The identification of these patterns can serve as reliable indicators for advancing seizure detection technologies and improving patient outcomes.
 

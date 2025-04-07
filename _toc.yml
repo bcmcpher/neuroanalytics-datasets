@@ -41,6 +41,7 @@ parts:
     - file: performant-computing.md
     - file: compute-canada.md
     - file: hpc-jobs.md
+    - file: bids.md
     - file: nipoppy.md
     - file: mriqc.md
     - file: fmriprep.md
@@ -54,6 +55,13 @@ parts:
     - file: brainlife.md
     - file: dandi.md
     - file: nightingale.md
+  - caption: Data Modalities
+    chapters:
+    - file: dwi.md
+    - file: fmri.md
+    - file: smri.md
+    - file: eeg-meg.md
+    - file: pet.md
   - caption: External Resources
     chapters:
     - file: external.md

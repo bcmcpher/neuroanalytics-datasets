@@ -55,6 +55,7 @@ parts:
     - file: brainlife.md
     - file: dandi.md
     - file: nightingale.md
+    - file: ukbb-rap.md
   - caption: Data Modalities
     chapters:
     - file: dwi.md
@@ -62,6 +63,9 @@ parts:
     - file: smri.md
     - file: eeg-meg.md
     - file: pet.md
+  - caption: Large Language Models
+    chapters:
+    - file: llm-overview.md
   - caption: External Resources
     chapters:
     - file: external.md

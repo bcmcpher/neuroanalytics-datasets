@@ -66,6 +66,7 @@ parts:
   - caption: Large Language Models
     chapters:
     - file: llm-overview.md
+    - file: llm-methods-of-synthesis.md
   - caption: External Resources
     chapters:
     - file: external.md

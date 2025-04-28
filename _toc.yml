@@ -47,6 +47,7 @@ parts:
     - file: fmriprep.md
     - file: qsiprep.md
     - file: brainstorm.md
+    - file: zettelkasten.md
   - caption: Data Portals
     chapters:
     - file: open-neuro.md

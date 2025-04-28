@@ -200,6 +200,76 @@ include:
 - Diffusion Weighted imaging (DWI)
 - Arterial Spin Labeling (ASL)
 
+#### dMRI Data Features
+
+The Diffusion Magnetic Resonance Imaging (dMRI) data collection for
+the PREVENT-AD cohort evolved across two major phases of data
+acquisition (Phase 1: 2011–2017; Phase 2: Post-2019).
+
+The changes in the dMRI protocol primarily reflect an upgrade in the
+MRI scanner.
+
+### Phase 1 dMRI Parameters (2011–2017, Stage 1)
+
+During Phase 1 of data acquisition (Stage 1), the multi-modal MRI
+sequences, including dMRI, were harmonized with the Alzheimer’s
+Disease Neuroimaging Initiative (ADNI) protocol.
+
+The specific dMRI sequence parameters available for this phase are
+detailed below:
+
+| Parameter | Detail | Source Citation |
+| :--- | :--- | :--- |
+| **Scanner** | Siemens TIM Trio 3 Tesla MRI scanner | |
+| **Coil** | Siemens standard 12-channel coil | |
+| **Sequence Type** | EPI 2D transversal; single shell diffusion MRI | |
+| **TR (Repetition Time)** | 9300 ms | |
+| **TE (Echo Time)** | 92 ms | |
+| **FOV (Field of View)** | $192 \times 192 \times 130$ mm | |
+| **Phase Encode** | A-P (Anterior-Posterior) | |
+| **BW (Bandwidth)** | 1628 Hz/px | |
+| **Resolution** | $2 \times 2 \times 2$ mm$^3$ | |
+| **b-values/Directions** | $b = \text{ s/mm}^2$ with 65 total directions (1 b0 direction and 64 diffusion directions) | |
+| **Scan Time** | 10.15 min | |
+
+### Phase 2 dMRI Parameters (Post-2019)
+
+MRI acquisition resumed in January 2019 after the original Siemens Tim
+Trio scanner was upgraded to a **Prisma Fit**. The MRI protocol was
+subsequently updated.
+
+The key changes for diffusion MRI acquisition in Phase 2 included:
+
+1.  **Scanner Upgrade:** The scanner used was the upgraded **Prisma
+	Fit** 3T.
+2.  **Coil Usage:** The **32-channel head coil** was used exclusively.
+3.  **Protocol Change:** The diffusion MRI shifted from a **single
+	shell to a multi-shell** protocol.
+4.  **Data Type:** The acquired data is described as multi-shell
+	diffusion imaging.
+
+While the sources confirm the use of multi-shell diffusion imaging in
+Phase 2, the exact numerical acquisition parameters (TR, TE, b-values,
+directions for the multi-shell sequence) are referenced to
+supplementary Table 4 in the sources, the details of which are not
+explicitly provided in the available text.
+
+### Derivative Measures
+
+For both phases, the dMRI data was processed to derive quantitative
+measures of white matter properties. These analytic measures include
+diffusion tensor imaging (DTI) metrics derived from the multi-shell
+dMRI data, specifically:
+
+*   Diffusion properties of white matter tracts quantified using
+	**TractoFlow, RBXFlow, and Tractometry Flow**.
+*   DTI measures in 52 white matter bundles reconstructed from
+	whole-brain tractograms computed using the SCIL Tractoflow
+	pipelines.
+*   Common dMRI analytical measures listed in the available data
+	repository include Fractional Anisotropy (FA), Mean Diffusivity
+	(MD), Axial Diffusivity (AD), and Radial Diffusivity (RD).
+
 ### Clinical and Behavioral Data
 
 The Repeatable Battery for Assessment of Neuropsychological Status

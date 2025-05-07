@@ -51,12 +51,13 @@ parts:
   - caption: Data Portals
     chapters:
     - file: open-neuro.md
+    - file: ukbb-rap.md
     - file: brain-code.md
     - file: conp-data-portal.md
     - file: brainlife.md
     - file: dandi.md
     - file: nightingale.md
-    - file: ukbb-rap.md
+    - file: hbi.md
   - caption: Data Modalities
     chapters:
     - file: dwi.md

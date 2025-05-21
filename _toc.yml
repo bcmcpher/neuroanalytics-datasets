@@ -49,6 +49,9 @@ parts:
     - file: brainstorm.md
     - file: pyg-graph-nets.md
     - file: zettelkasten.md
+  - caption: Research Tool Discussions
+    chapters:
+    - file: spectrogram-diffs.md
   - caption: Data Portals
     chapters:
     - file: open-neuro.md

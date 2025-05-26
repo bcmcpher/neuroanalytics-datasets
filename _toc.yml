@@ -51,7 +51,7 @@ parts:
     - file: zettelkasten.md
   - caption: Research Tool Discussions
     chapters:
-    - file: spectrogram-diffs.md
+    - file: coding-obscurities.md
   - caption: Data Portals
     chapters:
     - file: open-neuro.md

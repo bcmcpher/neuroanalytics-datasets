@@ -40,6 +40,7 @@ parts:
     - file: code-environments.md
     - file: performant-computing.md
     - file: compute-canada.md
+    - file: cc-jupyter-hub.md
     - file: hpc-jobs.md
     - file: bids.md
     - file: nipoppy.md

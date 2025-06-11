@@ -7,6 +7,65 @@ two-dimensional data (such as images or structured tables) primarily
 due to the **irregular structure** and **relational nature** of graph
 data, which necessitates specialized models and data representations.
 
+### The shape of the data matters
+
+FreeSurfer 8 will be transitioning many of it's core algorithms to
+convolutional neural nets (CNNs), but not necessarily graph
+networks. New tools like `SynthMorph` and `SynthSeg` are not based on
+graph machine learning methods. Instead, they rely on widely adopted
+CNN architectures common in medical image analysis.
+
+This is not meant to diminish the power or utility of using Graph ML
+models, but only to point out that they need to be used
+deliberately. Just because data can be characterized as a graph does
+not mean the added complexity and assumptions of the model will
+benefit the analysis.
+
+To further use the new FreeSurfer 8 functions as an example,
+
+#### SynthMorph (Joint Registration)
+SynthMorph is a deep learning (DL) tool developed for fast, symmetric,
+diffeomorphic end-to-end affine and deformable brain registration .
+1. Overall Approach: SynthMorph uses DL methods that learn a function
+mapping an image pair to an output transform . The general framework
+employs convolutional neural networks (CNNs).
+2. Affine Component: The affine model hθ​ implemented in SynthMorph
+ uses a modified Detector architecture. This architecture relies on a
+ series of convolutions to predict spatial feature maps. These feature
+ maps are used to calculate corresponding moving and fixed point
+ clouds, and a weighted least-squares (WLS) solution then provides the
+ affine transform. Alternative affine architectures considered in the
+ related work include the Encoder, which uses a convolutional encoder
+ combined with a fully connected (FC) layer, and Decomposer, a fully
+ convolutional network. Some affine DL strategies utilize vision
+ transformers instead of convolutional layers, but SynthMorph
+ ultimately favors the Detector architecture.
+3. Deformable Component: The deformable module uses a U-Net
+ architecture (a convolutional neural network) for predicting a
+ stationary velocity field (SVF). The model also employs a
+ hypernetwork Γξ​, which is described as a simple feed-forward network
+ with four ReLU-activated hidden FC layers, used to parameterize the
+ weights of the deformable task network gη​ based on a regularization
+ weight λ.
+
+#### SynthSeg (Segmentation)
+SynthSeg is a convolutional neural network (CNN) designed for the
+segmentation of brain MRI scans of any contrast and resolution without
+requiring retraining or fine-tuning .
+1. Architecture: The core segmentation network used in SynthSeg (and
+related variant SynthSeg+) is based on a 3D UNet architecture .
+2. Components: The UNet comprises five levels, with operations
+including two convolutions per level, batch normalization, max-pooling
+(contracting path), upsampling (expanding path), and skip
+connections. The modules used in the robust variant, SynthSeg+ (such
+as segmenters S1, S2, S3, and the denoiser D), are also implemented as
+CNNs.
+
+The descriptions of both SynthMorph and SynthSeg emphasize
+architectures based on standard convolutional networks (U-Nets,
+encoders, detectors) for image processing, not methods explicitly
+utilizing graph structures or Graph Neural Networks (GNNs).
+
 Here is a breakdown of the differences based on data characteristics
 and the resulting ML pipeline requirements:
 
@@ -315,9 +374,9 @@ advantages for biomedical analysis:
 
 ### Working with functional (MRI, EEG / MEG, etc) data as a graph
 
-fMRI and EEG are more similar to **time series data**
-or **temporal data**, and can be modeled using specialized graph networks
-and the supporting frameworks.
+fMRI and EEG are more similar to **time series data** or **temporal
+data**, and can be modeled using specialized graph networks and the
+supporting frameworks.
 
 Graph networks serve as a general language for analyzing entities and
 the relationships and interactions between them. When dealing with
@@ -384,3 +443,188 @@ defined:
 	involve predicting links that will appear in the future (e.g.,
 	between time $T_{0}$ and time $T_{0'}$), which is highly relevant
 	for networks evolving over time.
+
+## Updated context of Graph Signal Processing
+
+Time series data from neuroimaging modalities, such as fMRI
+(functional Magnetic Resonance Imaging) BOLD or EEG
+(Electroencephalography), can be effectively modeled as a graph
+structure to leverage sophisticated machine learning algorithms like
+Graph Neural Networks (GNNs) and Graph Transformers.
+
+This modeling approach is particularly valuable because the complex
+data structure inherent in these imaging modalities aligns well with
+the **networked organizational structure of the human brain**.
+
+The general strategy involves three key steps: defining the nodes,
+determining the node features (signals), and inferring the edges
+(connectivity).
+
+### 1. Defining Nodes and Node Features
+
+In the context of brain imaging, the nodes in the graph typically
+represent regions or entities of interest.
+
+*   **Node Identity:** Nodes are often defined as specific brain
+	regions, or, at a finer scale, as individual pixels or clustered
+	areas used in modalities like calcium imaging.
+*   **Node Features ($X_i$):** These features represent the localized
+	information or time series signal associated with each node.
+	*   For time series forecasting, a subset of nodes can serve as
+		"forecasting entities" with a given past time series, denoted
+		as $X_i^t$.
+	*   Nodes can be annotated with arbitrary features, which are
+		typically represented as vectors.
+	*   In traditional machine learning pipelines applied to graphs,
+		features can be handcrafted structural characteristics derived
+		from the network topology, such as **node degree** (number of
+		connections), **centrality measures** (like closeness or
+		betweenness centrality), **clustering coefficient** (measuring
+		neighbor interconnectedness), or **Graphlet Degree Vectors**
+		(counting specified local subgraph structures, or graphlets).
+
+### 2. Inferring Edges and Connectivity
+
+Edges represent the relationships, interactions, or **connectivity
+patterns** between the brain regions (nodes). The method for inferring
+these connections transforms the raw time series data into a
+relational structure:
+
+*   **Functional Connectivity:** Graph theory analysis based on
+	**fMRI** is used to investigate alterations of brain functional
+	networks. Similarly, GNN models can investigate the alterations of
+	connectivity patterns associated with disorders like Autism
+	Spectrum Disorder (ASD). This functional connectivity represents
+	the estimated statistical relationships between the time series of
+	different brain regions.
+*   **Correlation-Based Clustering:** For mesoscale dynamics,
+	connectivity can be inferred by clustering spatially and
+	temporally related activity. For example, two active pixels can be
+	clustered in the same "avalanche" (clustered activity) if they are
+	within one time frame and a given radius ($r$) of one
+	another. This radius $r$ is estimated from the **Partial
+	Correlation Function (PCF)**, which measures direct linear
+	interaction between pixels.
+*   **Neighborhood Overlap Metrics:** Connectivity can be quantified
+	using link features that capture the overlap between the local
+	neighborhoods of two nodes, such as the number of common neighbors
+	or the Jaccard coefficient. More globally, metrics like the **Katz
+	Index** count the number of paths of all different lengths between
+	two nodes, with longer paths being exponentially discounted by
+	their length, $l$.
+
+### 3. Application in Machine Learning
+
+Once the time series data is structured as a graph, it can be utilized
+by specialized machine learning models:
+
+*   **Graph Learning Frameworks:** Libraries like PyTorch Geometric
+	(PyG) provide the framework for storing and processing this
+	structured data, defining the node features ($X$), the graph
+	connectivity (Edge Index), and any edge attributes.
+*   **GNNs and Graph Transformers:** These methods are designed to
+	extract important information from graphs.
+	*   Graph learning provides a means to model the **interactions of
+		multiple brain regions**.
+	*   Graph Convolutional Networks (GCNs) are used in brain
+		connectivity analysis to provide interpretable deep learning
+		models. GNNs can also be used for individualized cortical
+		parcellation on large **fMRI datasets**.
+	*   In time series forecasting, Graph Transformers or GNNs are
+		used to obtain **Graph entity encodings** ($\phi_i$). The
+		subgraphs used for encoding are sampled to ensure that they
+		only contain nodes with a timestamp earlier than the current
+		prediction time, preventing future information leakage.
+*   **Graph Signal Processing (GSP):** Techniques like the **Graph
+	Fourier Transform (GFT)** can be applied to the resulting graph
+	structure, where low-frequency components are used to approximate
+	extended source activation. This is used in solving the
+	**Electrophysiological source imaging problem** (highly relevant
+	to EEG/MEG) using a BiLSTM neural network.
+
+Graph learning is also incorporated into multimodal modeling
+frameworks, allowing the integration of networks derived from
+different brain imaging modalities (like functional and structural
+networks).
+
+## Applied description
+
+Graph machine learning methods are highly effective tools for
+observing and quantifying changes in functional networks, including
+transitions between clinical or physiological states. This capacity
+stems from the fundamental alignment between graph structures and the
+**networked organizational structure of the human brain**. Graph
+learning approaches are specifically designed to extract important
+information from graphs and model the **interactions of multiple brain
+regions**.
+
+### 1. Identifying Alterations Associated with Clinical Disorders
+
+Graph machine learning (GML) frameworks, particularly those utilizing
+Graph Neural Networks (GNNs), have been applied directly to brain
+imaging data to classify disorders and investigate corresponding
+network alterations:
+
+*   **Autism Spectrum Disorder (ASD):** An invertible dynamic Graph
+	Convolutional Network (GCN) model was developed to **identify
+	ASD** and **investigate the alterations of connectivity patterns**
+	associated with the disorder. This approach provides an
+	interpretable deep learning model for brain connectivity analysis.
+*   **Bipolar Disorder (BD-I):** Researchers have explored the
+	**aberrant functional connectivity** of sensory motor networks in
+	BD-I patients and found a significant relationship between
+	**abnormal intranetwork and internetwork functional connectivity
+	values**, clinical symptoms, and executive function.
+*   **Hearing Loss:** Graph theory analysis based on fMRI has been
+	used to investigate **alterations of brain functional networks**
+	in infants with profound bilateral congenital sensorineural
+	hearing loss (SNHL), offering insights into functional network
+	alterations in the early stage of the condition.
+*   **Parkinson's Disease (PD):** Multimodal modeling frameworks, such
+	as JOIN-GCLA (Joining Omics and Imaging Networks via Graph
+	Convolutional Layers and Attention), use multiple graph
+	convolution layers and an attention mechanism to combine
+	multi-modal imaging and multi-omics datasets for the **prediction
+	of PD**.
+
+### 2. Observing Pharmacologically Induced State Transitions
+
+Network analysis, which provides the foundation for GML approaches by
+defining graph structure and features, can reveal distinct transitions
+in brain activity associated with altered states of consciousness,
+such as those induced by anesthetics:
+
+*   **Multiple Pathways Away from Criticality:** Research using
+	mesoscale cortical calcium imaging in mice studied the
+	manipulation of the critical state (associated with healthy quiet
+	wakefulness, QW) using various anesthetics (isoflurane, ketamine,
+	pentobarbital). The study observed **multiple transitions away
+	from the homeostatic critical state** observed during QW.
+*   **Quantifying State Differences:** These transitions are
+	quantified by measuring changes in network characteristics, such
+	as:
+	*   **Scale-Free Statistics:** Quiet wakefulness exhibits
+		scale-free statistics in clustered neuronal activity
+		(avalanches). Surgical plane anesthesia often induces
+		**multiple dynamical modes**, most of which **do not maintain
+		critical avalanche dynamics**.
+	*   **Functional Connectivity/Correlation:** Changes are observed
+		in the **Partial Correlation Function (PCF)**, which measures
+		direct linear interaction between pixels and is used to define
+		the clustering radius ($r$) for avalanches. For example,
+		surgical plane isoflurane was found to heavily reduce the PCF.
+	*   **Distinct Dynamical Modes:** Surgical planes of different
+		anesthetics induce qualitatively different dynamics, such as
+		**aperiodic cortex-wide bursts** (isoflurane) or **wave-like
+		activity** (ketamine). These manifest as substantial
+		differences in the **Kolmogorov–Smirnov distance ($D_{KS}$)**
+		relative to QW recordings, which are used as a
+		binning-independent measure of dissimilarity.
+*   **Awake-Like Dynamics:** Interestingly, some recordings under
+	surgical plane anesthesia for isoflurane and ketamine exhibited
+	**awake-like (AL) dynamics**, with avalanche statistics and PCF
+	resembling QW, despite the subject being in a
+	loss-of-responsiveness state. This highlights that observing
+	network characteristics is key to understanding the underlying
+	state, which may be more nuanced than a simple binary
+	classification of "critical" or "non-critical" states.

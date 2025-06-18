@@ -155,3 +155,87 @@ combined activities. CAMIL is a member of Confederation of
 Laboratories for Artificial Intelligence Research in Europe (CLAIRE)
 and the TAILOR network – Foundations of Trustworthy AI – Integrating
 Learning, Optimization and Reasoning.
+
+# Organization for Human Brain Mapping
+
+The Organization for Human Brain Mapping (OHBM) is an international
+society dedicated to advancing the understanding of the anatomical and
+functional organization of the human brain using neuroimaging. A
+primary function of the society is to provide educational forums for
+the exchange of up-to-the-minute and groundbreaking research across
+neuroimaging methods and applications. OHBM achieves this through its
+member-led committees and an Annual Meeting that is held in different
+locations throughout the world.
+
+## OHBM Mission
+
+The purpose of the Society shall be to advance the understanding of
+the anatomical and functional organization of the human brain, and
+promote its medical and societal applications.
+
+OHBM will:
+
+- Bring together researchers who are engaged in investigations
+relevant to human brain organization (MRI, fMRI, PET, EEG/MEG, and
+other cutting-edge approaches such as electrophysiology, preclinical
+imaging, neuroepidemiology, genetics); and -Engage in other activities
+to facilitate communication among these scientists and promote
+education in human brain organization.
+
+## Resources
+
+### Aperture Neuro
+
+Aperture Neuro is a peer-reviewed, low-cost, open-access journal
+dedicated to advancing our understanding of the brain, catalyzing the
+dissemination of novel methods and tools, and increasing the impact of
+brain imaging and assessment on society.
+
+Affiliated with the Organization for Human Brain Mapping (OHBM), our
+mission is to support an innovative publishing ecosystem that reflects
+the diverse ways modern neuroimaging research is conducted and shared.
+
+To foster an inclusive and respectful environment, we expect all
+authors, editors, and reviewers to follow the organization’s Code of
+Conduct.  Scope of Submissions
+
+We welcome submissions from all researchers in brain imaging and
+neuroscience. We seek contributions that enhance our understanding of
+the brain’s structure, function, organizational principles, and
+computational mechanisms.
+
+In addition to traditional submission types, Aperture Neuro accepts
+non-traditional research objects, recognizing their contribution to
+scientific progress and striving to give them the credit and
+visibility they deserve.
+
+Our current publication scope covers a wide array of categories,
+including:
+- Original research
+- Review articles
+- Book reviews
+- Tutorials
+- Conference and workshop summaries
+- Registered reports
+- Editorials
+- Commentaries
+- Replication studies
+- Toolboxes and resusable software
+- Dataset descriptions
+
+### Committee on Best Practices in Data Analysis and Sharing (COBIDAS)
+
+In June 2014, OHBM Council created a “Statement on Neuroimaging
+Research and Data Integrity”, and in a practical move created a
+Committee on Best Practices in Data Analysis and Sharing (COBIDAS).
+
+The OHBM Committee on Best Practice in Data Analysis and Sharing
+(COBIDAS) on MRI was completed in 2016 and is available here:
+http://www.humanbrainmapping.org/COBIDASreport and on bioRxiv.  You
+can cite this document with this reference:
+
+Nichols, T. E., Das, S., Eickhoff, S. B., Evans, A. C., Glatard, T.,
+Hanke, M., Kriegeskorte, N., Milham, M. P., Poldrack, R. A., Poline,
+J.-B., Proal, E., Thirion, B., Van Essen, D. C., White, T., Yeo,
+B. T. T. (2016). Best Practices in Data Analysis and Sharing in
+Neuroimaging using MRI. bioRxiv doi: 10.1101/054262.

@@ -416,6 +416,110 @@ more flexible, investigator-driven data collection strategy that
 dramatically expanded the breadth of high-end biomarkers (PET, MEG,
 multi-shell dMRI) collected.
 
+## Possible Data Products
+
+The PREVENT-AD cohort collects rich multimodal data, including
+extensive neuroimaging, genetics, and pathology biomarkers, enabling
+the construction of various multimodal connectomes beyond the standard
+functional connectivity derived from resting-state functional magnetic
+resonance imaging (fMRI).
+
+The data available supports the construction of connectomes across
+three primary domains: **Structural Connectivity**,
+**Neurophysiological Connectivity**, and **Pathology-based Networks**.
+
+### 1. Structural Connectomes (using Diffusion MRI)
+
+The raw Diffusion MRI (dMRI) data, including multi-shell sequences
+collected in Phase 2, is crucial for modeling white matter pathways
+and building structural connectomes (often referred to as the
+structural "wiring diagram" of the brain).
+
+Structural connectomes can be built by running tractography algorithms
+(such as those used in TractoFlow, which has already processed
+PREVENT-AD dMRI data) between parcellated gray matter
+regions. Possible resulting structural connectomes include:
+
+*   **Streamline Count/Density Connectomes:** These networks quantify
+	the strength of the anatomical connection (edge) between two brain
+	regions (nodes) based on the **log$_{10}$ Streamline Count** or
+	**Log$_{10}$ Streamline Density** derived from tractography.
+*   **Streamline Length Connectomes:** These networks quantify
+	connections based on the **Log$_{10}$ Streamline Length** between
+	regions.
+*   **Validated Structural Connectomes using LiFE:** Connectome edges
+	can be weighted using the **Linear Fascicle Evaluation (LiFE)**
+	method. This method estimates a connectome by testing the
+	"Strength of Evidence" for each edge based on how well the
+	tractography streamlines fit the underlying diffusion data (using
+	a virtual lesion method).
+
+### 2. Multimodal Structural Connectomes (Combining dMRI Measures)
+
+The edges of the structural connectome derived from dMRI can be mapped
+with microstructural properties to create multimodal networks that
+reflect tissue integrity, rather than just anatomical presence.
+
+*   **DTI-derived Microstructural Connectomes:** By averaging
+	quantitative metrics derived from Diffusion Tensor Imaging (DTI)
+	along reconstructed white matter pathways (tracts), connectomes
+	can be built based on:
+	*   **Fractional Anisotropy (FA):** Connectome weights could
+		reflect the mean or standard deviation of FA along the tract
+		profile connecting two regions.
+	*   **Axial Diffusivity (AD), Radial Diffusivity (RD), and Mean
+		Diffusivity (MD):** Although not explicitly listed as
+		connectome outputs, DTI measures are already extracted for
+		white matter tracts in PREVENT-AD.
+*   **Advanced Microstructural Connectomes (e.g., NODDI):** Given the
+	multi-shell diffusion data available from Phase 2, more complex
+	models like Neurite Orientation Dispersion and Density Imaging
+	(NODDI) can be applied. Connectomes could then be built based on
+	measures such as:
+	*   **Neurite Density Index (NDI)**.
+	*   **Orientation Dispersion Index (ODI)**.
+	*   **Isotropic Volume Fraction (ISOVF)**.
+
+### 3. Neurophysiological Connectomes (using MEG)
+
+The PREVENT-AD dataset includes resting-state Magnetoencephalography
+(MEG) data, a modality that measures brain electrical activity
+directly.
+
+*   **Frequency-Band Specific Connectomes:** Unlike fMRI, which
+	measures slow hemodynamic changes, MEG data can be used to
+	construct connectomes reflecting instantaneous connectivity (e.g.,
+	phase synchrony or power coupling) across specific neural
+	oscillation bands:
+	*   Delta (2–4 Hz).
+	*   Theta (5–7 Hz).
+	*   Alpha (8–12 Hz).
+	*   Beta (13–30 Hz).
+	*   Gamma1 (30–60 Hz).
+	*   Gamma2 (60–90 Hz).
+
+### 4. Morphometric and Molecular Networks (Multimodal Integration)
+
+Multimodal networks can be derived by correlating non-connectivity
+measures across anatomical regions defined by atlases like the
+Desikan-Killiany (DK) atlas.
+
+*   **Morphometric Similarity Networks:** Based on the volumetric
+	measures already calculated (e.g., cortical thickness, cortical
+	volume, and subcortical volume derived from T1w using FreeSurfer),
+	researchers could build networks where the connectivity between
+	two nodes is defined by the statistical similarity (covariance or
+	correlation) of their morphological properties across
+	participants.
+*   **Pathology-Pathology Covariance Networks:** The availability of
+	regional standardized uptake value ratios (SUVRs) for both
+	Amyloid-$A\beta$ PET and tau PET across DK atlas regions, allows
+	for the construction of networks describing how $A\beta$
+	deposition in one region correlates with $A\beta$ or tau
+	deposition in another region across subjects. This maps patterns
+	of pathology accumulation and spread, which is highly relevant to
+	Alzheimer’s disease progression.
+
 ## CNS Projects
 
 The goal is to create common processing derivatives for multiple

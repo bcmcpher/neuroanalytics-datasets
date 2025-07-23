@@ -48,6 +48,7 @@ parts:
     - file: fmriprep.md
     - file: qsiprep.md
     - file: brainstorm.md
+    - file: gigaconnectome.md
     - file: pyg-graph-nets.md
     - file: zettelkasten.md
   - caption: Research Tool Discussions

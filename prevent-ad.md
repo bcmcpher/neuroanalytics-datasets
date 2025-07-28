@@ -289,8 +289,62 @@ visuospatial capacities) and a total score, consists of 12 subtests:
 - story recall
 - figure recall
 
-Additionally, standard Clinical measures like the MOCA and UPDRS are
-also collected.
+The RBANS is a comprehensive, approximately 30-minute test designed to
+assess cognitive performance over time. It yields not only a total
+score (Global cognition), but also **five specific Index scores** that
+categorize cognitive function:
+
+#### RBANS Subtests and Corresponding Cognitive Domains
+
+The 12 subtests listed contribute to one of the five specific
+cognitive domains (Index scores) as follows:
+
+| Subtest Name | Cognitive Domain (Index Score) | Description/Details |
+| :--- | :--- | :--- |
+| **List Learning** | **Immediate Memory** | Assesses the ability to immediately learn and recall information. |
+| **Story Learning** | **Immediate Memory** | Assesses immediate recall of narrative information. |
+| **Figure Copy** | **Visuospatial/Constructional** | Assesses the ability to accurately reproduce a visual figure. |
+| **Line Orientation** | **Visuospatial/Constructional** | Assesses visuospatial capacities. |
+| **Picture Naming** | **Language** | Measures expressive language abilities. |
+| **Semantic Fluency** | **Language** | Measures ability to generate words within a specific semantic category (a measure of verbal fluency). |
+| **Digit Span** | **Attention** | Assesses short-term auditory memory and attention span. |
+| **Coding** | **Attention** | Assesses processing speed and attention. |
+| **List Recall** | **Delayed Memory** | Assesses delayed free recall of the word list learned earlier. |
+| **List Recognition** | **Delayed Memory** | Assesses delayed recognition of the learned word list. |
+| **Story Recall** | **Delayed Memory** | Assesses delayed free recall of the narrative learned earlier. |
+| **Figure Recall** | **Delayed Memory** | Assesses delayed recall of the figure copied earlier. |
+
+#### Context and Scoring in PREVENT-AD
+
+*   **Longitudinal Assessment:** RBANS was performed annually at
+	baseline (BL00) and at subsequent follow-up visits (FU12, FU24,
+	FU36, FU48, etc.).
+*   **Version Rotation:** To reduce practice effects during
+	longitudinal assessment, the RBANS is available in **four
+	equivalent versions** (A, B, C, D) in both French and English.
+*   **Scoring Metrics:** The RBANS data are scored following the
+	manual. Index scores are typically age-adjusted with a mean of 100
+	and a standard deviation (SD) of 15, while subtest scores have a
+	mean of 10 and a SD of 3.
+*   **Age-Specific Norms:** In PREVENT-AD, scores were calculated
+	using both the standard age-adjusted method AND using norms
+	specified exclusively for individuals aged 60–69 years. Both
+	scoring methods are available in the registered data repository,
+	allowing for the detection of potential decline with advancing
+	age.
+*   **Clinical Screening:** Low performance on the RBANS (e.g., index
+	score > 1 SD below the mean in two different cognitive domains)
+	during follow-up visits could trigger a complete cognitive
+	evaluation by a certified neuropsychologist to determine if the
+	individual developed Mild Cognitive Impairment (MCI).
+*   **Data Availability:** A total of 2662 RBANS assessments were
+collected between 2012 and 2023, with 2493 assessments from the 348
+participants who agreed to data sharing available to
+researchers. However, RBANS data collected during the COVID-19
+pandemic (March 2020 and July 2021) were obtained virtually and are
+**not shared** because not all tasks were completed, and index scores
+could not be computed reliably.  Additionally, standard Clinical
+measures like the MOCA and UPDRS are also collected.
 
 Other scores and demographics are available as well.
 
@@ -383,6 +437,129 @@ Magnetoencephalography (MEG).
 	*   **Resting-state MEG scans** were collected (n=114 shared),
 		usually on the same day as an A$\beta$ or tau PET scan.
 	*   MEG data were collected using a whole-head CTF MEG system.
+
+
+### Improvements Over Time
+
+The second phase (Phase 2) of data acquisition in the PREVENT-AD
+cohort, which began after November 2017, introduced several
+substantial methodological improvements and new modalities aimed at
+enhancing the quality, depth, and predictive value of the collected
+data.
+
+The expected improvements to the quality of the data in PREVENT-AD
+Phase 2 stem from three main areas: enhanced neuroimaging acquisition
+techniques, the introduction of novel high-sensitivity molecular
+biomarkers, and extended longitudinal follow-up/clinical tracking.
+
+### I. Enhanced Neuroimaging Acquisition Quality
+
+The greatest expected quality improvements come from hardware upgrades
+and modified imaging protocols, especially for MRI and functional
+imaging:
+
+*   **MRI Scanner Upgrade and Coil Usage:** The Siemens Tim Trio MRI
+	scanner used in Phase 1 was upgraded to a **Prisma Fit** scanner
+	when scanning resumed in 2019. Furthermore, the higher-channel
+	**32-channel head coil** was used exclusively, replacing the mixed
+	use of 12-channel and 32-channel coils in Phase 1. This hardware
+	upgrade generally yields superior signal-to-noise ratio (SNR) and
+	image quality.
+*   **Diffusion MRI (dMRI) Improvement:** The dMRI protocol was
+	updated from a single-shell sequence (used in Phase 1) to a
+	**multi-shell diffusion MRI** sequence. Multi-shell data allows
+	for fitting increasingly complex models that better summarize the
+	orientation of water movement in tissue, leading to more advanced
+	microstructure estimates beyond standard Diffusion Tensor Imaging
+	(DTI), such as **Neurite Orientation Dispersion and Density
+	Imaging (NODDI)** measures (Neurite Density Index [NDI],
+	Orientation Dispersion Index [ODI], and Isotropic Volume Fraction
+	[ISOVF]). The new multi-shell data has already led to key insights
+	into brain microstructural alterations.
+*   **Functional MRI (fMRI) Improvement:** The resting-state fMRI
+	acquisition was changed from a **single-echo** to a **multi-echo**
+	sequence. Multi-echo fMRI is known to help improve image quality
+	by facilitating the removal of non-BOLD noise components, leading
+	to cleaner functional connectivity estimates.
+*   **Introduction of PET Imaging (Amyloid and Tau):** Phase 2
+	introduced standardized in-vivo measures of core Alzheimer's
+	pathologies through Positron Emission Tomography (PET) scanning.
+	*   **High Resolution:** The PET scans (A$\beta$ and tau) were
+		acquired on a **brain-dedicated Siemens/CTI high-resolution
+		research tomograph (HRRT)**. This scanner provides a high
+		spatial resolution of $2.4 \text{mm}$ at the center of the
+		field of view, which is superior to most other scanners.
+	*   **Standardized Quantification:** The analytic measures
+		provided include **Standardized Uptake Value Ratios (SUVRs)**
+		across Desikan-Killiany (DK) atlas regions and, specifically
+		for A$\beta$ PET, the standardized **Global A$\beta$ PET
+		Centiloid values**.
+*   **Inclusion of Neuroimaging Analytic Measures:** Instead of only
+	sharing raw data, the Phase 2 release innovated by including
+	**analytic neuroimaging measures (data derivatives)**, such as
+	connectome matrices and volumes, computed by imaging experts. This
+	eases data usage for researchers who may not specialize in
+	neuroimaging processing. A concrete example of this is the sharing
+	of five dominant patterns of brain atrophy quantified by an
+	independent group and shared back to the repository.
+
+### II. Introduction of Novel High-Sensitivity Biomarkers
+
+Phase 2 significantly expanded the range and sensitivity of fluid
+biomarkers collected, enhancing the ability to track the preclinical
+stage of the disease:
+
+*   **Advanced Plasma Biomarkers:** The new release incorporates
+	**novel longitudinal AD plasma biomarkers**. This includes highly
+	specific and sensitive markers quantified using in-house Single
+	molecule array (Simoa) assays in collaboration with the University
+	of Gothenburg:
+	*   **Amyloid-beta** (A$\beta$1-40, A$\beta$1-42).
+	*   **Neurodegeneration and inflammation markers** (GFAP, NfL).
+	*   Highly predictive **Phosphorylated tau species**
+		($\text{p-tau}181$, $\text{p-tau}231$, and
+		$\text{p-tau}217$). Plasma $\text{p-tau}217$ has been shown to
+		be highly predictive, with most PREVENT-AD participants having
+		abnormal values progressing from cognitively unimpaired (CU)
+		to Mild Cognitive Impairment (MCI) within 10 years.
+*   **CSF Biomarker Expansion:** New CSF data includes A$\beta$1-40
+	and A$\beta$1-42 measured using automated immunoassay and
+	$\text{p-tau}217$ measured using an in-house Simoa assay.
+*   **Comprehensive Proteomics:** High-throughput aptamer-based
+	proteomics assay data (SomaScan 7K panel) measuring approximately
+	6,600 unique protein targets in baseline CSF samples is now
+	shared.
+
+### III. Extended Longitudinal Follow-up and Clinical Depth
+
+Phase 2 data enhances quality by addressing the crucial need for
+longer follow-up in preclinical AD studies, which affects the
+interpretation of results:
+
+*   **Extended Follow-up:** Phase 2 includes **six years of additional
+	cognitive and MRI follow-ups**, extending the data set beyond the
+	Phase 1 period (2011–2017). The median follow-up is now over 8
+	years, with observations available for more than 12 years in
+	total. The length of follow-up has been shown to "dramatically
+	change the interpretation of the results," for instance,
+	increasing the percentage of A$\beta$ positive/tau negative
+	($\text{A+T-}$ ) individuals who progressed to MCI from 9% to 42%
+	after $2.4$ years of additional follow-up.
+*   **Improved Clinical Progression Tracking:** The systematic
+	exclusion of participants who developed MCI was discontinued in
+	Phase 2, meaning data is now available for participants who
+	developed MCI or dementia (105 participants were classified as
+	having MCI as of December 2023). This is critical for
+	characterizing the trajectory from preclinical status to cognitive
+	impairment.
+*   **New Modalities (MEG and Actigraphy):** The inclusion of
+	**Magnetoencephalography (MEG)** is a novelty, as this
+	neuroimaging modality is rarely acquired in large longitudinal AD
+	studies. MEG data provides unique insights into neurophysiological
+	alterations (e.g., spectral power density estimates across six
+	frequency bands). Additionally, **objective sleep measures**
+	collected via wrist Actiwatches were introduced, providing
+	high-quality objective behavioral data on sleep characteristics.
 
 ### Neuroimaging Analytic Measures
 
@@ -528,6 +705,12 @@ projects to utilize.
 ## Access
 
 Access the dataset [here](https://openpreventad.loris.ca/).
+
+Villeneuve, S., Poirier, J., Breitner, J. C., Tremblay‐Mercier, J.,
+Remz, J., Raoult, J. M., ... & PREVENT‐AD Research Group. (2025). The
+PREVENT‐AD cohort: Accelerating Alzheimer's disease research and
+treatment in Canada and beyond. Alzheimer's & Dementia, 21(10),
+e70653.
 
 Tremblay-Mercier, J., Madjar, C., Das, S., Binette, A. P., Dyke,
 S. O., Étienne, P., ... & PREVENT-AD Research Group. (2021). Open

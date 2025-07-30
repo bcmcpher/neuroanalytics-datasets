@@ -50,6 +50,7 @@ parts:
     - file: brainstorm.md
     - file: gigaconnectome.md
     - file: pyg-graph-nets.md
+    - file: brainlm.md
     - file: zettelkasten.md
   - caption: Research Tool Discussions
     chapters:

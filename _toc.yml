@@ -65,6 +65,7 @@ parts:
     - file: dandi.md
     - file: nightingale.md
     - file: hbi.md
+    - file: project-management.md
   - caption: Data Modalities
     chapters:
     - file: dwi.md

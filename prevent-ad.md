@@ -314,6 +314,60 @@ cognitive domains (Index scores) as follows:
 | **Story Recall** | **Delayed Memory** | Assesses delayed free recall of the narrative learned earlier. |
 | **Figure Recall** | **Delayed Memory** | Assesses delayed recall of the figure copied earlier. |
 
+#### Clinical Metrics
+
+The PREVENT-AD cohort, which enrolls cognitively unimpaired older adults at risk for sporadic Alzheimer's Disease (AD), collects a vast array of **clinically relevant metrics and scales** across cognitive function, clinical status, physical health, and psycho-affective measures.
+
+Here are the key clinically relevant metrics and scales observed, along with the time points of their collection:
+
+##### Cognitive Assessment Metrics
+
+The primary cognitive data is collected longitudinally using standardized, detailed neuropsychological batteries:
+
+| Metric / Scale | Domain Assessed | Time Points of Collection | Details |
+| :--- | :--- | :--- | :--- |
+| **Repeatable Battery for the Assessment of Neuropsychological Status (RBANS)** | Immediate Memory, Delayed Memory, Language, Attention, Visuospatial/Constructional, Global cognition (Total score) | **Phase 1 (2011–2017):** Administered at Baseline (BL00) and annually at follow-up visits (FU12, FU24, FU36, FU48). **Phase 2 (2017–2023):** Still collected every year. | Consists of **12 subtests** (including list learning, story learning, digit span, coding, etc.). RBANS assessments totaled 2662 collected between 2012 and 2023. |
+| **Montreal Cognitive Assessment (MoCA)** | Cognitive Screening | **Eligibility Visit (EL00)**. | Used to exclude cognitive impairment at enrollment (score typically $\le 26/30$ might trigger a full evaluation). |
+| **Clinical Dementia Rating (CDR) Scale** | Global Severity of Dementia/Cognitive Impairment | **Eligibility Visit (EL00)**. **Latest Follow-up Time Points** (reported in an additional CSV file). | Used to exclude significant impairment at enrollment (CDR higher than 0 led to exclusion unless confirmed normal by exhaustive evaluation). Most MCI participants still had a CDR of 0. |
+| **Eight-item Informant Interview to Differentiate Aging and Dementia (AD8)** | Mild Dementia Screening | **Baseline (BL00)** and **Annual visits** up to November 2017 (Phase 1). | Assessed using the study partner to evaluate changes in memory and functional abilities. |
+| **Rey Auditory Verbal Learning Test (RAVLT)** | Immediate and Delayed Verbal Memory | **Phase 2 (Starting Aug 2017):** Collected on a subset and later the full cohort. | Added in August 2017 as a new neuropsychological test. |
+| **Trail Making Test (TMT)** | Speed, Executive Function (cognitive flexibility) | **Phase 2 (Starting Aug 2017):** Collected on a subset and later the full cohort. | Added in August 2017. |
+| **Color-Word Interference Test of the D-KEFS** | Speed, Executive Function (inhibitory control and flexibility) | **Phase 2 (Starting Aug 2017):** Collected on a subset and later the full cohort. | Added in August 2017. |
+| **Alzheimer Progression Score (APS)** | Composite Biomarker Summary Outcome | Calculated for participants in the **INTREPAD trial**. | Derived using item response theory from various cognitive and biomarker measures. |
+
+##### Clinical Progression and Diagnosis
+
+Clinical status classification, crucial for defining the preclinical cohort, is tracked:
+
+*   **Clinical Progression/Status:** The study tracks the transition of participants from **Cognitively Unimpaired (CU) to Mild Cognitive Impairment (MCI) or Dementia**. This classification is based on multidisciplinary consensus meetings, reviewing all available longitudinal cognitive information, specifically for participants who performed below norms on RBANS or RAVLT.
+	*   **Time Points:** Classification reviews are based on all available time points up to the latest follow-up (as of December 2023, 105 participants had been classified as having MCI at their latest follow-up time point). An additional CSV file reports the CDR score and **latest clinical status** (including dementia diagnosis reported by a physician or study partner).
+
+##### Behavioral, Lifestyle, and Psycho-Affective Measures
+
+Questionnaires and objective measures were introduced, primarily starting in 2016, to evaluate modifiable risk factors:
+
+| Metric / Scale | Domain Assessed | Time Points of Collection | Details |
+| :--- | :--- | :--- | :--- |
+| **Pittsburgh Sleep Quality Index** | Sleep Quality (over a one-month interval) | **Multiple Follow-ups (Phase 2):** Introduced starting in 2016 as part of an investigator-led project. Global scores are available for 314 participants. | Self-reported measure. |
+| **Epworth Sleepiness Scale** | Daytime Sleepiness | **Multiple Follow-ups (Phase 2):** Introduced starting in 2016. Global scores are available for 314 participants. | Self-reported measure. |
+| **Actigraphy** | Objective Sleep Measures (e.g., duration, efficiency, fragmentation) | **Multiple Follow-ups (Phase 2):** Starting in 2017, collected over one week, often coinciding with PET imaging, with up to 3 time points per participant. | Objective measurement using a wrist Actiwatch. Data includes average and day-to-day variability. |
+| **Geriatric Depression Scale - Short Version** | Depressive symptoms (over one week) | **Multiple Follow-ups (Phase 2):** Introduced starting in 2016. | Self-reported measure. |
+| **Geriatric Anxiety Inventory** | Anxiety symptoms (over one week) | **Multiple Follow-ups (Phase 2):** Introduced starting in 2016. | Self-reported measure. |
+| **Apathy Evaluation Scale** | Apathy symptoms (in the past 4 weeks) | **Multiple Follow-ups (Phase 2):** Introduced starting in 2016. | Self-reported measure. |
+| **DASS (Stress Scale)** | Stress symptoms (over one week) | **Multiple Follow-ups (Phase 2):** Introduced starting in 2016. (Only the Stress scale was assessed). | Self-reported measure. |
+| **Big Five Inventory** | Personality (Neuroticism, Openness, Extraversion, Agreeableness, Conscientiousness) | **Multiple Follow-ups (Phase 2):** Introduced starting in 2016. | Used to study associations between personality traits and pathology. |
+| **Perseverative Thinking** | Repetitive negative thinking | **Multiple Follow-ups (Phase 2):** Introduced starting in 2016. | Associated with amyloid, tau, and cognitive decline in the study. |
+| **Everyday Cognition** | Memory, Language, and Executive Functioning (subjective reports) | **Multiple Follow-ups (Phase 2):** Introduced starting in 2016. | Assesses subjective cognitive complaint. |
+
+##### Clinical Health and Risk Factors
+
+Other health and risk metrics are collected:
+
+*   **CAIDE score (Cardiovascular Risk Factors, Aging, and Incidence of Dementia)**: Calculated at the **Eligibility visit (EL00)**. The score uses baseline age, sex, education, blood pressure, BMI, cholesterol, physical activity, and $APOE \text{ } \epsilon 4$ status.
+*   **McGill Pain Questionnaire - Short Version**: Assesses Pain duration and intensity. Collected at **multiple time points (Phase 2)**.
+*   **Physical Health Metrics:** **Blood Pressure, pulse, and weight** were updated annually. **Blood test results** (including glycosylated hemoglobin, thyroid stimulating hormone, Vitamin B12, and cholesterol levels) were obtained annually.
+*   **Medication Use:** Self-reported medication intake information and medical history were updated annually.
+
 #### Context and Scoring in PREVENT-AD
 
 *   **Longitudinal Assessment:** RBANS was performed annually at
@@ -437,7 +491,6 @@ Magnetoencephalography (MEG).
 	*   **Resting-state MEG scans** were collected (n=114 shared),
 		usually on the same day as an A$\beta$ or tau PET scan.
 	*   MEG data were collected using a whole-head CTF MEG system.
-
 
 ### Improvements Over Time
 

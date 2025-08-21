@@ -55,6 +55,7 @@ parts:
   - caption: Research Tool Discussions
     chapters:
     - file: coding-obscurities.md
+    - file: imbalanced-data.md
   - caption: Data Portals
     chapters:
     - file: open-neuro.md

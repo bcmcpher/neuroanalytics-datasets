@@ -49,6 +49,7 @@ parts:
     - file: qsiprep.md
     - file: brainstorm.md
     - file: gigaconnectome.md
+    - file: brian.md
     - file: pyg-graph-nets.md
     - file: brainlm.md
     - file: zettelkasten.md

@@ -140,3 +140,103 @@ disease progression in the following ways:
 	entities. This structured knowledge, combined with semantic
 	vectors from assessments, could provide a richer basis for
 	tracking and predicting disease states.
+
+## Using Compute Canada / DRAC to Embed data
+
+Running a Large Language Model (LLM) to embed a collection of text for
+later retrieval involves significant machine learning computation and
+data handling, presenting several challenges related to data
+management, resource usage, and job scheduling within a
+High-Performance Computing (HPC) cluster environment.
+
+Here are the key challenges associated with performing large-scale LLM
+embedding tasks:
+
+### 1. Data Management and I/O Performance
+
+LLM embedding typically requires reading a large text collection,
+which creates substantial I/O demands. The distributed filesystem
+architecture on HPC clusters introduces specific performance
+bottlenecks:
+
+*   **Slowdown from Small Files:** If the collection of text consists
+	of **datasets containing lots of small files** (hundreds of
+	thousands or more), your software could be **significantly slowed
+	down** by streaming these files from shared storage like
+	`/project` or `/scratch` to a compute node. On a distributed
+	filesystem, files should ideally be stored in **large single-file
+	archives**.
+*   **Filesystem Quotas:** Large collections of small files may
+	violate **filesystem quotas** imposed on clusters, which limit the
+	maximum number of filesystem objects a user can possess.
+*   **Shared Storage Limitations:** Shared storage locations (like
+	`home`, `project`, or `scratch`) are intended for **storing and
+	reading at low frequencies** (e.g., reading one large chunk every
+	10 seconds, rather than 10 small chunks every second). Frequent
+	reads necessary for an embedding task can stress these systems.
+*   **Choosing the Right Storage:** Accessing a file on shared storage
+	like `/project` has **very different performance implications**
+	compared to accessing data locally on the compute node.
+	*   For datasets up to **$100 \text{ GB}$ or less**, the optimal
+		practice is to **transfer the data to the local storage** of
+		the compute node (available at `$SLURM\_TMPDIR`) at the start
+		of the job, as this storage is **orders of magnitude faster
+		and more reliable** than shared storage.
+	*   If the dataset is larger, it must be left in shared storage.
+
+### 2. Computational Scale and Job Scheduling
+
+LLMs require substantial resources, often including GPUs, and the
+embedding process may be lengthy or involve many iterations, leading
+to scheduling complexity:
+
+*   **Long Running Computations:** If the process of embedding the
+	text collection is **long** (e.g., expected to take many days),
+	you **should use checkpointing**. For instance, a three-day
+	computation should be split into smaller chunks (e.g., $24 \text{
+	hours}$). This practice helps prevent the loss of work in case of
+	an outage and provides an **edge in terms of job priority**
+	because more nodes are typically available for shorter jobs.
+*   **Time Limits and Priority:** General-purpose clusters like Fir,
+	Narval, Nibi, and Rorqual have job time limits of up to **7 days**
+	(168 hours). Shorter jobs (e.g., $3 \text{ hours}$ or less) have
+	**more scheduling opportunities** than longer jobs and benefit
+	from the backfilling mechanism employed by the scheduler.
+*   **Inefficient Job Submission:** If the LLM embedding requires
+	processing the text collection in many small, similar parts,
+	submitting each part as a separate job is inefficient. It is
+	recommended to **group many similar jobs into one** using tools
+	like META, GLOST, or GNU Parallel.
+*   **GPU Resource Accounting:** When requesting resources for the LLM
+	job, the calculation of future job priority is based on the
+	resources requested, not the resources actually used. GPU
+	resources are tracked using **Reference GPU Units (RGUs)**.
+	*   Users are charged for the **maximum number of RGU-core-memory
+		bundles they request**. If you request more CPU cores or
+		memory than the job uses in relation to the GPU resources, the
+		scheduler will count the usage based on the largest
+		requirement (RGU, cores, or memory), potentially leading to
+		**over-charging** and lowering the priority of future jobs for
+		your research group.
+
+### 3. Software Environment Challenges
+
+Setting up the necessary environment for LLMs (which rely heavily on
+Python and specialized libraries) requires following specific HPC
+directives:
+
+*   **Anaconda Restriction:** Users are strongly advised to **avoid
+	using Anaconda** and use `virtualenv` instead for managing Python
+	environments. When switching to `virtualenv`, users should install
+	all necessary packages, excluding low-level libraries like CUDA
+	and CuDNN, which are **already installed on the clusters**.
+*   **Dependency Management:** If using specialized machine learning
+	packages like TensorFlow or PyTorch (which are relevant for LLMs),
+	users must refer to the documentation for installation, common
+	pitfalls, and ensuring compatibility.
+*   **Non-Deterministic Behavior:** If using Recurrent Neural Networks
+	(RNNs) or multi-head attention APIs within the LLM architecture
+	with cuDNN built with CUDA Toolkit 10.2 or higher, there may be
+	**non-deterministic behavior** unless the
+	`CUBLAS_WORKSPACE_CONFIG` environmental variable is set to specify
+	a single buffer size.

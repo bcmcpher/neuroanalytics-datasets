@@ -33,6 +33,7 @@ parts:
     - file: tools/brainstorm.md
   - caption: Research Methods
     chapters:
+    - file: methods/git.md
     - file: methods/deep-learning.md
   - caption: Data Portals
     chapters:

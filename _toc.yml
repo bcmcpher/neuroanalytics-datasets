@@ -6,41 +6,44 @@ root: intro.md
 parts:
   - caption: Meet the Scholars
     chapters:
-    - file: hao-ting_wang.md
-    - file: josh_neudorf.md
-    - file: mohamed_abdelhack.md
-    - file: vibujithan_vigneshwaran.md
-    - file: diellor_basha.md
-    - file: julia_katharina.md
-    - file: lindsay_munroe.md
-    - file: davor_curic.md
-    - file: nooshin_bahador.md
+    - file: scholars/hao-ting_wang.md
+    - file: scholars/josh_neudorf.md
+    - file: scholars/mohamed_abdelhack.md
+    - file: scholars/vibujithan_vigneshwaran.md
+    - file: scholars/diellor_basha.md
+    - file: scholars/julia_katharina.md
+    - file: scholars/lindsay_munroe.md
+    - file: scholars/davor_curic.md
+    - file: scholars/nooshin_bahador.md
   - caption: Datasets
     chapters:
-    - file: abcd.md
-    - file: adni.md
-    - file: prevent-ad.md
+    - file: dataset/abcd.md
+    - file: dataset/adni.md
+    - file: dataset/prevent-ad.md
   - caption: Research Topics
     chapters:
-    - file: dementia.md
-    - file: parkinsons.md
-    - file: alzheimers.md
-    - file: seizures.md
-    - file: depression.md
-    - file: aging.md
+    - file: topics/dementia.md
+    - file: topics/parkinsons.md
+    - file: topics/alzheimers.md
+    - file: topics/seizures.md
+    - file: topics/depression.md
+    - file: topics/aging.md
+  - caption: Tools
+    chapters:
+    - file: tools/brainstorm.md
   - caption: Research Methods
     chapters:
-    - file: deep-learning.md
+    - file: methods/deep-learning.md
   - caption: Data Portals
     chapters:
-    - file: open-neuro.md
-    - file: brain-code.md
-    - file: conp-data-portal.md
-    - file: brainlife.md
-    - file: dandi.md
-    - file: nightingale.md
+    - file: portals/open-neuro.md
+    - file: portals/brain-code.md
+    - file: portals/conp-data-portal.md
+    - file: portals/brainlife.md
+    - file: portals/dandi.md
+    - file: portals/nightingale.md
   - caption: Contributing Formatting and Files
     chapters:
-    - file: markdown.md
-    - file: notebooks.ipynb
-    - file: markdown-notebooks.md
+    - file: contributing/markdown.md
+    - file: contributing/notebooks.ipynb
+    - file: contributing/markdown-notebooks.md

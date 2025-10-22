@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Canadian Neuroanalytics Data Resources
-author: Brent McPherson
+author: Brent McPherson and the CNS Scholars
 logo: banner_crop.png
 
 # Force re-execution of notebooks on each build.

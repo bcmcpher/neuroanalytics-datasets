@@ -1,23 +1,19 @@
 # Vibujithan Vigneshwaran
 
-You should link to github or other social media you want connected.
-
-If you want to add any images, add them with:
-[Image_reference](./images/image.jpg)
+https://scholar.google.com/citations?user=C96_0IkAAAAJ&hl=en
 
 ## Background
 
-A short paragraph about your background and experiences.
+I graduated from the University of Moratuwa, Sri Lanka, with a BSc
+(Hons) in Electronic and Telecommunications engineering. My honours
+project focused on applying deep-learning techniques to identify
+patterns in brain waves. Due to my interest in medical imaging, I
+pursued a PhD at the University of Auckland, New Zealand, where I
+developed image-processing techniques to analyse large-scale coronary
+microscopy images. As a postdoctoral fellow at the MIP lab, I am
+researching causal models to explain, interpret, and generalize
+medical data.
 
 ## Project
 
-A short paragraph describing your project.
-
-Add links to the relevant shared pages where appropriate, like:
-[deep learning](./deep-learning.md)
-
-and to refer to a specific section:
-[software](./deep-learning.md/#software-and-tools)
-
-If you want to refer to a heading in the same document, just do:
-[In my previous experience](#background)
+Causal Deep Learning for Neuroimaging applications

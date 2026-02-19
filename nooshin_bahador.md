@@ -1,11 +1,10 @@
----
 # Nooshin Bahador
 
 <img src="https://github.com/nbahador/nbahador.github.io/blob/main/assets/img/image.jpg?raw=true" width="150" alt="Nooshin Bahador Logo"/>
-  
+
 Welcome to my profile! I'm a Computer Science Engineer (PhD) with extensive experience in data analysis, especially in the healthcare industry.
 
-You can find more of my work and projects on my [GitHub](https://github.com/nbahador).  
+You can find more of my work and projects on my [GitHub](https://github.com/nbahador).
 
 For more details on my publications, please visit my [Google Scholar profile](https://scholar.google.com/citations?hl=en&user=8TGM83oAAAAJ&view_op=list_works).
 
@@ -28,7 +27,7 @@ I have extensive knowledge in handling both **structured** and **unstructured he
 ## Project
 
 The main objective of this project is to develop a **Seizure Monitoring System** that can detect and analyze epileptic activity. Epileptic seizures are caused by sudden bursts of electrical activity in the brain, often resulting from imbalances in neurotransmitter levels. These seizures can be triggered by various factors, and understanding their onset and progression is essential for accurate diagnosis and effective treatment.
- 
+
 This project focuses on the detection of specific biomarker known as **"chirp"** in electrographic data. These biomarkers are consistently present during epileptic episodes and exhibit distinct frequency modulation patterns in the electrographic discharges. The identification of these patterns can serve as reliable indicators for advancing seizure detection technologies and improving patient outcomes.
 
 The main objective of this project is to develop a **Seizure Monitoring System** that can detect and analyze epileptic activity. Epileptic seizures are caused by sudden bursts of electrical activity in the brain, often resulting from imbalances in neurotransmitter levels. These seizures can be triggered by various factors, and understanding their onset and progression is essential for accurate diagnosis and effective treatment.
@@ -39,25 +38,25 @@ For a detailed explanation of the "chirp" pattern and its significance in seizur
 
 ---
 
-#### [100,000 Labeled Chirp Spectrogram Images – Download on Hugging Face!](https://huggingface.co/datasets/nubahador/ChirpLoc100K___A_Synthetic_Spectrogram_Dataset_for_Chirp_Localization/blob/main/README.md)
+### [100,000 Labeled Chirp Spectrogram Images – Download on Hugging Face!](https://huggingface.co/datasets/nubahador/ChirpLoc100K___A_Synthetic_Spectrogram_Dataset_for_Chirp_Localization/blob/main/README.md)
 
 <table>
 <tr>
 <td style="vertical-align: top; width: 25%">
-  
-**Curated by**  
+
+**Curated by**
 Nooshin Bahador
 
 </td>
 <td style="vertical-align: top; width: 20%">
-  
-**Funded by**  
+
+**Funded by**
 Canadian Neuroanalytics Scholars Program
 
 </td>
 <td style="vertical-align: top; width: 30%">
-  
-**Citation**  
+
+**Citation**
 Bahador, N., & Lankarany, M. (2025). Chirp localization via fine-tuned transformer model: A proof-of-concept study. arXiv preprint arXiv:2503.22713. [[PDF]](https://arxiv.org/pdf/2503.22713)
 
 </td>
@@ -68,8 +67,8 @@ Bahador, N., & Lankarany, M. (2025). Chirp localization via fine-tuned transform
 ### Sample Generated Spectrogram
 
 <div style="display: flex; justify-content: space-between; gap: 20px;">
-    <img src="https://github.com/nbahador/chirp_spectrogram_generator/blob/main/Usage_Example/spectrogram_4.png" alt="Sample Generated Spectrogram" width="300" height="200" />
-    <img src="https://github.com/nbahador/chirp_spectrogram_generator/blob/main/Usage_Example/Samples.jpg" alt="Sample Generated Spectrograms" width="400" height="200" />
+	<img src="https://github.com/nbahador/chirp_spectrogram_generator/blob/main/Usage_Example/spectrogram_4.png" alt="Sample Generated Spectrogram" width="300" height="200" />
+	<img src="https://github.com/nbahador/chirp_spectrogram_generator/blob/main/Usage_Example/Samples.jpg" alt="Sample Generated Spectrograms" width="400" height="200" />
 </div>
 
 ### Sample Generated Label
@@ -151,18 +150,16 @@ If you use this software in your research, please cite it as follows:
 
 ### Sample EEG Data
 
-The sample EDF (European Data Format) files used in this project were obtained from the following publication:  
+The sample EDF (European Data Format) files used in this project were obtained from the following publication:
 
-**Brown, L. A., Hasan, S., Foster, R. G., & Peirson, S. N. (2016).** _The raw EEG data, 4 files (EEG_A to D), in European data format (.edf) [Data set]._ Zenodo.  
-Available at: [https://doi.org/10.5281/zenodo.160118](https://doi.org/10.5281/zenodo.160118)  
+**Brown, L. A., Hasan, S., Foster, R. G., & Peirson, S. N. (2016).** _The raw EEG data, 4 files (EEG_A to D), in European data format (.edf) [Data set]._ Zenodo.
+Available at: [https://doi.org/10.5281/zenodo.160118](https://doi.org/10.5281/zenodo.160118)
 Direct access to the data can be found here: [Zenodo Record](https://zenodo.org/records/160118).
 
 ### FieldTrip Toolbox
 
 This project leverages the FieldTrip toolbox to support different file formats, including FIF, EDF, and BDF.
 
-**Reference:**  
-Oostenveld, R., Fries, P., Maris, E., & Schoffelen, J.-M. (2011). *FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data.* Computational Intelligence and Neuroscience, 2011, 156869.  
+**Reference:**
+Oostenveld, R., Fries, P., Maris, E., & Schoffelen, J.-M. (2011). *FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data.* Computational Intelligence and Neuroscience, 2011, 156869.
 You can access the FieldTrip toolbox here: [https://www.fieldtriptoolbox.org/](https://www.fieldtriptoolbox.org/).
-
----

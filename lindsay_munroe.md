@@ -1,23 +1,11 @@
 # Lindsay Munroe
 
-You should link to github or other social media you want connected.
-
-If you want to add any images, add them with:
-[Image_reference](./images/image.jpg)
+https://www.linkedin.com/in/lindsay-munroe-65469662/?originalSubdomain=uk
 
 ## Background
 
-A short paragraph about your background and experiences.
+I am a PhD research scholar with the CNS Scholars. For my research topic, I will be applying novel deep learning techniques for neuroimaging research.
 
 ## Project
 
-A short paragraph describing your project.
-
-Add links to the relevant shared pages where appropriate, like:
-[deep learning](./deep-learning.md)
-
-and to refer to a specific section:
-[software](./deep-learning.md/#software-and-tools)
-
-If you want to refer to a heading in the same document, just do:
-[In my previous experience](#background)
+Predicting progression of neurodegenerative diseases with explainable AI

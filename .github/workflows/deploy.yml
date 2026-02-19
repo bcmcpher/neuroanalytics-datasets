@@ -46,12 +46,10 @@ jobs:
       # Build the book
       - name: Build the book
         run: |
-          jupyter-book build $GITHUB_WORKSPACE
+          jupyter-book build $GITHUB_WORKSPACE --html
 
-      - name: List build output
+      - name: Check build output exits
         run: |
-          echo "Contents of repository root:"
-          ls -la
           echo "Checking for _build directory:"
           find . -name "_build" -type d
           echo "Checking for html directory:"

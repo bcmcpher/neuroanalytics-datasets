@@ -52,6 +52,7 @@ jobs:
         run: |
           echo "Checking for _build directory:"
           find . -name "_build" -type d
+          ls -Rla _build
           echo "Checking for html directory:"
           find . -name "html" -type d
 

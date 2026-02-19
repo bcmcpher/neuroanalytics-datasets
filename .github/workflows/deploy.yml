@@ -48,7 +48,7 @@ jobs:
         run: |
           mv _toc.yml _toc.yml.bak
           mv _config.yml _config.yml.bak
-          jupyter-book build --help
+          export BASE_URL="/neuroanalytics-datasets"
           jupyter-book build --html --ci
 
       - name: Check build output exits

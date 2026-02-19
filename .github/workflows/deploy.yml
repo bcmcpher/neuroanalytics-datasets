@@ -48,8 +48,8 @@ jobs:
         run: |
           mv _toc.yml _toc.yml.bak
           mv _config.yml _config.yml.bak
-          jupyter-book build --all
           jupyter-book build --help
+          jupyter-book build --html --ci
 
       - name: Check build output exits
         run: |

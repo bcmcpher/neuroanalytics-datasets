@@ -46,6 +46,8 @@ jobs:
       # Build the book
       - name: Build the book
         run: |
+          mv _toc.yml _toc.yml.bak
+          mv _config.yml _config.yml.bak
           jupyter-book build --all
           jupyter-book build --help
 
@@ -63,7 +65,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: _build
+          path: _build/html
 
       # Deploy the book's HTML to GitHub Pages
       - name: Deploy to GitHub Pages

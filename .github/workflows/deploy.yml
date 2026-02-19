@@ -46,7 +46,7 @@ jobs:
       # Build the book
       - name: Build the book
         run: |
-          jupyter-book build $GITHUB_WORKSPACE --output ./_build
+          jupyter-book build $GITHUB_WORKSPACE
 
       - name: List build output
         run: |

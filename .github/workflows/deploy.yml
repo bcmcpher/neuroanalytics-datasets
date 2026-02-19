@@ -46,7 +46,6 @@ jobs:
       # Build the book
       - name: Build the book
         run: |
-          mv myst.yml myst.yml.bak || true
           jupyter-book build $GITHUB_WORKSPACE --html
 
       - name: Check build output exits

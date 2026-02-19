@@ -46,7 +46,16 @@ jobs:
       # Build the book
       - name: Build the book
         run: |
-          jupyter-book build
+          jupyter-book build $GITHUB_WORKSPACE --path-output ./_build
+
+      - name: List build output
+        run: |
+          echo "Contents of repository root:"
+          ls -la
+          echo "Checking for _build directory:"
+          find . -name "_build" -type d
+          echo "Checking for html directory:"
+          find . -name "html" -type d
 
       # https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow
 

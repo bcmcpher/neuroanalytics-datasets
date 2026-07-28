@@ -8,7 +8,14 @@ If you are starting a project and wondering where to find data, how to get compu
 preprocessing pipeline to run, or whether a particular tool is worth the week it will take
 to learn — that is what this is for.
 
+**New here? Begin with [Start Here: a research pathway](pathway/overview.md)**, which
+walks the same material in the order you will actually need it: find data, get compute,
+organize it, preprocess, analyze, share.
+
 ## How it is organized
+
+**[Start Here](pathway/overview.md)** — the guided path through everything below, for
+anyone who does not yet know what they are looking for.
 
 **[Meet the scholars](cohort1/hao-ting_wang.md)** — what each scholar is working on, and
 increasingly, first-hand accounts of the tools they adopted and why. Those testimonial

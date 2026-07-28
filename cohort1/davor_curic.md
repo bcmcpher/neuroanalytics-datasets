@@ -45,3 +45,20 @@ The reference $\Sigma_0$ acts as the "origin" of the local linearization. The th
 ### Regularization
 
 SPD matrices obtained from short fMRI recordings can be poorly conditioned or near-singular, since the number of time points may be small relative to the number of brain regions. The criteria for non-singular FCs is that the number of time points must be at least equal to the number of variables. As an example, suppose a fMRI BOLD signal has 500 time points. If a Schaefer-100 parcellation is used, the resulting FCs will be non-singular (i.e., invertable). If a Schaefer-1000 parcellation is used, the resulting FCs will be singular (i.e., non-invertable). Near-singular matrices are also  numerically unstable and lie close to the boundary of the SPD manifold, making geodesic computations unreliable. Regularization — typically ridge-type shrinkage, which adds a small multiple of the identity $\Sigma \leftarrow \Sigma + \lambda I$ — pulls matrices away from the boundary and improves numerical stability. The regularization parameter $\lambda$ introduces a bias-variance tradeoff: too little regularization leaves computations unstable, while too much shrinks all FCs toward the identity and erases individual differences. In longitudinal disease studies this choice is particularly consequential, as over-regularization can obscure the subtle FC changes that characterize early disease progression.
+
+## Tools & Resources I Used
+
+<!--
+Scholars: this is your testimonial section - see contributing/bio-template.md
+
+In ~150 words, first person, tell someone starting today:
+  - What problem made you go looking for a tool?
+  - What did you try, and what did you settle on?
+  - What was genuinely hard about adopting it?
+  - What would you tell someone starting today?
+
+Link the pages you used, e.g.
+[fMRIPrep](../tools/brain_imaging/fmriprep.md), [BIDS](../tools/data_management/bids.md)
+
+Concrete beats comprehensive.
+-->

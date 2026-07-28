@@ -30,3 +30,20 @@ The pre-estimated normative model by [Rutherford et al.](https://doi.org/10.7554
 3. and increase the performance of prediction models for neuropsychiatric symptoms in PD patients using the Z-predict scores from the normative model instead of the raw cortical thickness values. 
 
 Important first steps in this project will be the gathering of available PD-brain imaging datasets with available neuropsychiatric assessment data as well as the harmonization of those assessments, since symptoms are measured by different inventories across datasets. For this, we collaborate closely with the [ENIGMA-PD](https://enigma.ini.usc.edu/ongoing/enigma-parkinsons/) Neuropsychiatry project, lead by [Eva van Heese](https://scholar.google.com/citations?user=JhpThRUAAAAJ&hl=en) and [Odile van den Heuvel](https://www.amsterdamumc.org/en/research/researchers/odile-van-den-heuvel.htm). 
+
+## Tools & Resources I Used
+
+<!--
+Scholars: this is your testimonial section - see contributing/bio-template.md
+
+In ~150 words, first person, tell someone starting today:
+  - What problem made you go looking for a tool?
+  - What did you try, and what did you settle on?
+  - What was genuinely hard about adopting it?
+  - What would you tell someone starting today?
+
+Link the pages you used, e.g.
+[fMRIPrep](../tools/brain_imaging/fmriprep.md), [BIDS](../tools/data_management/bids.md)
+
+Concrete beats comprehensive.
+-->

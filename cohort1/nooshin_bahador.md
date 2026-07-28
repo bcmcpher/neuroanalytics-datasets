@@ -163,3 +163,20 @@ This project leverages the FieldTrip toolbox to support different file formats, 
 **Reference:**
 Oostenveld, R., Fries, P., Maris, E., & Schoffelen, J.-M. (2011). *FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data.* Computational Intelligence and Neuroscience, 2011, 156869.
 You can access the FieldTrip toolbox here: [https://www.fieldtriptoolbox.org/](https://www.fieldtriptoolbox.org/).
+
+## Tools & Resources I Used
+
+<!--
+Scholars: this is your testimonial section - see contributing/bio-template.md
+
+In ~150 words, first person, tell someone starting today:
+  - What problem made you go looking for a tool?
+  - What did you try, and what did you settle on?
+  - What was genuinely hard about adopting it?
+  - What would you tell someone starting today?
+
+Link the pages you used, e.g.
+[fMRIPrep](../tools/brain_imaging/fmriprep.md), [BIDS](../tools/data_management/bids.md)
+
+Concrete beats comprehensive.
+-->

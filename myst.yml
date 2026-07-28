@@ -8,6 +8,15 @@ project:
   github: neuroanalytics/neuroanalytics-datasets
   toc:
     - file: intro.md
+    - title: Start Here
+      children:
+        - file: pathway/overview.md
+        - file: pathway/find-data.md
+        - file: pathway/get-compute.md
+        - file: pathway/organize-data.md
+        - file: pathway/preprocess.md
+        - file: pathway/analyze.md
+        - file: pathway/share-your-work.md
     - title: Meet the scholars
       children:
 

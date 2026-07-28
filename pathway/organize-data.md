@@ -37,4 +37,8 @@ have been processed, with which pipeline version, and which failed.
 - **[Zettelkasten](../tools/zettelkasten.md)** — a note-taking method for keeping research
   notes navigable over a multi-year project
 
+Two related pages: [getting data into BIDS](../tools/data_management/raw-to-bids.md) for
+the conversion itself, and [DataLad](../tools/data_management/datalad.md) for versioning
+the dataset while you do it.
+
 **Next:** [Preprocess](preprocess.md).

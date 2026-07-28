@@ -45,4 +45,11 @@ Work backwards from the question. Two practical filters:
 Or start from someone else's answer: the [research topics](../research_topics/alzheimers.md)
 hubs list which scholars work on what, and their pages name the datasets they chose.
 
+## Before you can download anything
+
+Open data is rarely open unconditionally. Several of the datasets above need an
+application, a Data Use Agreement, or institutional ethics approval — see
+[ethics and data access](../governance/ethics-and-data-access.md), and start that process
+now rather than after you have chosen.
+
 **Next:** [Get compute](get-compute.md) — start this in parallel, not after.

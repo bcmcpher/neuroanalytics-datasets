@@ -43,6 +43,15 @@ project:
           - file: cohort2/emmanuelle_renauld.md
           - file: cohort2/sima_abbasi.md
 
+    - title: Research Governance
+      children:
+        - file: governance/ethics-and-data-access.md
+        - file: governance/data-management-plans.md
+        - file: governance/pre-registration.md
+        - file: governance/credit-and-contributions.md
+        - file: governance/research-administration.md
+        - file: governance/stamped.md
+
     - title: Databases
       children:
 
@@ -102,6 +111,9 @@ project:
         - title: Data management
           children:
             - file: tools/data_management/bids.md
+            - file: tools/data_management/raw-to-bids.md
+            - file: tools/data_management/datalad.md
+            - file: tools/data_management/neurobagel.md
 
         - title: Brain imaging
           children:
@@ -132,12 +144,20 @@ project:
         - file: ai_models/llm-semantic-embedding.md
         - file: ai_models/notebooklm.md
         - file: ai_models/llm-methods-of-synthesis.md
+        - file: ai_models/ai-assisted-research.md
+        - file: ai_models/agent-callable-methods.md
+    - title: Publishing and Dissemination
+      children:
+        - file: publishing/data-and-code-release.md
+        - file: publishing/reporting-guidelines.md
+        - file: publishing/executable-articles.md
     - title: External Resources
       children:
         - file: external.md
     - title: Contributing Formatting and Files
       children:
         - file: contributing/bio-template.md
+        - file: contributing/roadmap.md
         - file: markdown.md
         - file: notebooks.ipynb
         - file: markdown-notebooks.md

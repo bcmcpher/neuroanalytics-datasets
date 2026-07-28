@@ -113,6 +113,7 @@ project:
         - file: external.md
     - title: Contributing Formatting and Files
       children:
+        - file: contributing/bio-template.md
         - file: markdown.md
         - file: notebooks.ipynb
         - file: markdown-notebooks.md

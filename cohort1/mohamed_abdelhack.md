@@ -25,3 +25,20 @@ I also appreciate a good conversation about politics, human rights, history, phi
 
 Neurodegenerative diseases affect a large percentage of elderly Canadians and manifest in various cognitive and motor symptoms depending on the affected brain area. Neurodegenerative diseases and vascular disorders may lead to types of dementia due to the effect of blood supply to the brain on neuronal health. Due to the interconnectedness of the brain, there are usually many shared symptoms that could result from similar impairments in brain processing circuits. However, we do not fully understand how cardiovascular illness may predispose individuals to dementia at the level of brain function. Previous studies found that Alzheimer disease, the most common neurodegenerative disease and cause of dementia, is associated with localized problems in areas related to memory and planning. In this study, I plan to use large datasets of brain imaging data and computational modeling to uncover shared and unique patterns of brain function between neurodegenerative illness and cardiovascular disease. I will build statistical models to find the relationships between cognitive performance and brain structural and functional measures. By understanding the statistics of how brain structure and function differs as cognitive changes develop, we can reveal which brain circuits are being affected across multiple disorders. This can enable us to build a mathematical model that we can validate using real patient data. This model will replicate the neural activation changes associated with various impairments and will enable us to understand how brain regions communicate with each other and how breakdowns in communication, due to a number of factors including cardiovascular disease, may lead to dementia. This will allow us to discover the early signs of neurodegeneration, allowing earlier intervention. It will also serve as a tool to monitor the effectiveness of therapies and their potential side effects.
 
+
+## Tools & Resources I Used
+
+<!--
+Scholars: this is your testimonial section - see contributing/bio-template.md
+
+In ~150 words, first person, tell someone starting today:
+  - What problem made you go looking for a tool?
+  - What did you try, and what did you settle on?
+  - What was genuinely hard about adopting it?
+  - What would you tell someone starting today?
+
+Link the pages you used, e.g.
+[fMRIPrep](../tools/brain_imaging/fmriprep.md), [BIDS](../tools/data_management/bids.md)
+
+Concrete beats comprehensive.
+-->

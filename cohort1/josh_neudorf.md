@@ -1,5 +1,8 @@
 # Josh Neudorf
 
+## HIRED: Assistant Professor at Athabasca University
+Congratulations!
+
 ## Project: Using Graph Neural Network Deep Learning to identify brain connectivity biomarkers for mild cognitive impairment and dementia in the aging population
 
 ### Datasets

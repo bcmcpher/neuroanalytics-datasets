@@ -44,4 +44,8 @@ Know what your analysis needs before you run anything, because re-running is exp
 See the [modality](../modalities/fmri.md) pages for what each pipeline produces and what
 is typically done with it.
 
+- **[DataLad](../tools/data_management/datalad.md)** — running pipelines through
+  `datalad containers-run` records the command, its inputs, and the container version, so
+  "which fMRIPrep produced this figure" stays answerable
+
 **Next:** [Analyze](analyze.md).

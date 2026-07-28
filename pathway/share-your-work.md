@@ -30,6 +30,8 @@ The point of both pages is that "it worked on my machine in 2024" is not a resul
 - **[OpenNeuro](../data/portals/open-neuro.md)**,
   **[CONP](../data/portals/conp-data-portal.md)**,
   **[DANDI](../data/portals/dandi.md)** — where to deposit data
+- **[Releasing data and code](../publishing/data-and-code-release.md)** — DOIs, versioning,
+  and citation
 - **[External resources](../external.md)** — further reading
 
 ## Contribute back to this book
@@ -42,4 +44,5 @@ you — see the [scholar page template](../contributing/bio-template.md). A para
 which tool you picked, what was painful, and what you would tell someone starting today is
 the most useful thing you can leave behind.
 
-For everything else, see the [formatting notes](../markdown.md) and open a PR.
+For everything else, see the [formatting notes](../markdown.md), the
+[coverage roadmap](../contributing/roadmap.md) for known gaps worth filling, and open a PR.

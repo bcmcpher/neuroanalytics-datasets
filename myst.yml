@@ -76,10 +76,14 @@ project:
 
         - title: Computer science
           children:
-            - file: tools/computer_science/containers.md
             - file: tools/computer_science/git-overview.md
             - file: tools/computer_science/git-examples.md
             - file: tools/computer_science/code-environments.md
+            - file: tools/computer_science/containers.md
+            - file: tools/computer_science/compute-canada.md
+            - file: tools/computer_science/cc-jupyter-hub.md
+            - file: tools/computer_science/hpc-jobs.md
+            - file: tools/computer_science/performant-computing.md
 
         - title: Data management
           children:
@@ -87,9 +91,15 @@ project:
 
         - title: Brain imaging
           children:
-            - file: tools/brain_imaging/brainlm.md
-            - file: tools/brain_imaging/brainstorm.md
+            - file: tools/brain_imaging/nipoppy.md
+            - file: tools/brain_imaging/mriqc.md
             - file: tools/brain_imaging/fmriprep.md
+            - file: tools/brain_imaging/qsiprep.md
+            - file: tools/brain_imaging/gigaconnectome.md
+            - file: tools/brain_imaging/brainstorm.md
+            - file: tools/brain_imaging/brainlm.md
+            - file: tools/brain_imaging/brian.md
+            - file: tools/brain_imaging/pyg-graph-nets.md
 
     - title: Discussions
       children:

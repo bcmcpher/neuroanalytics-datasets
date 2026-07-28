@@ -285,6 +285,19 @@ By default, gtmseg will use the ?h.aparc.annot cortical atlas. If you have your 
 
 where annot name is the name of the annotation (eg, aparc.a2009s; no need to include the .annot). The lhbase and rhbase will dictate the segmentation indices in the output volume. The annot will have a color table embedded in it in which each label will be given an index. For left hemi labels, this index will be added to lhbase to generate the index for the volume. Eg, --ctx-annot aparc 1000 2000, then lh pericalcarine will be 21+1000=1021; for rh it will be 21+2000. This will apear in the output gtmseg colortable. There are two constraints on how you set the base values. First, they must be 1000 or greater so that downstream software knows that this is cortical gray matter. Second, the difference between the bases must be greater than the number of cortical labels, otherwise the lh and rh indicies will overlap. The new labels should appear in the gtmseg+myannot.ctab as cortex tissue type. Load the output into freeview (see above) to confirm that the segmentation is correct. When you run mri_gtmpvc, specify --seg gtmseg+myannot.mgz.
 
-# Referneces
+## CNS Projects
+
+- [Diellor Basha](../cohort1/diellor_basha.md) — co-registering Abeta/tau PET maps with
+  the topology of large-scale cortical activity, to forecast voxel-wise tau and Abeta
+  estimates from MEG
+
+## Related Resources
+
+**Datasets** — [PREVENT-AD](../data/databases/prevent-ad.md) includes Ab/tau PET
+alongside MRI and CSF measures
+
+**Related topics** — [Alzheimer's Disease](../research_topics/alzheimers.md)
+
+## References
 
 https://surfer.nmr.mgh.harvard.edu/fswiki/PetSurfer

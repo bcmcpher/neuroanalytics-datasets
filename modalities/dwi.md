@@ -199,3 +199,17 @@ summarize water movement and tissue properties.
 		FA, MD, or NODDI metrics (NDI, ODI, ISOVF), can be mapped onto
 		these structural network edges to quantify microstructural
 		integrity along specific white matter bundles.
+
+## CNS Projects
+
+- [Emmanuelle Renauld](../cohort2/emmanuelle_renauld.md) — works mainly with diffusion
+  MRI and tractography
+- [Josh Neudorf](../cohort1/josh_neudorf.md) — how structural connectivity measured with
+  diffusion MRI constrains and supports functional connectivity
+
+## Related Resources
+
+**Processing** — [QSIPrep](../tools/brain_imaging/qsiprep.md),
+[BIDS](../tools/data_management/bids.md), [MRIQC](../tools/brain_imaging/mriqc.md)
+
+**Related topics** — [Dementia](../research_topics/dementia.md)

@@ -66,6 +66,11 @@ project:
     - title: Research Methods
       children:
         - file: deep-learning.md
+        - file: methods/graph-neural-networks.md
+        - file: methods/foundation-models.md
+        - file: methods/transfer-learning.md
+        - file: methods/normative-modelling.md
+        - file: methods/geometry-aware.md
     - title: Research Tools
       children:
 

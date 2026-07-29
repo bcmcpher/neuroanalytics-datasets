@@ -14,8 +14,8 @@ benchmarks.
 I hold a Ph.D. in Hearing Science from Western University, where my
 dissertation focused on speech intelligibility assessment using automatic
 speech recognition, spanning [deep learning](../deep-learning.md) for audio processing, acoustic
-modeling, and psychoacoustics. Prior to that, I completed an M.Sc. in
-Mechatronics Engineering with a focus on signal processing, and a B.Sc.
+modeling, and psychoacoustics. Prior to that, I completed an M\.Sc. in
+Mechatronics Engineering with a focus on signal processing, and a B\.Sc.
 in Computer Engineering with a specialization in embedded systems.
 
 My technical experience spans transformer-based speech models, multimodal

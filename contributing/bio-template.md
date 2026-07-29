@@ -67,6 +67,22 @@ material. From a page in `cohort1/` or `cohort2/`, use `../`:
 See [Tom George's page](../cohort2/tom_george.md) for an example of a scholar
 page that links out to the datasets, modalities, and methods it draws on.
 
+### Escape degree abbreviations
+
+Write `M\.Sc.` and `B\.Sc.`, with a backslash before the first period:
+
+```markdown
+I completed an M\.Sc. in Mechatronics Engineering, and a B\.Sc. in
+Computer Engineering.
+```
+
+MyST auto-links anything shaped like a domain name, and `.sc` is a real
+top-level domain (Seychelles). Without the backslash, `M.Sc.` silently becomes
+a link to `http://M.Sc`, which goes nowhere. The backslash suppresses that; the
+page still reads `M.Sc.` exactly as written.
+
+`Ph.D.` is fine as-is — `.D` is too short to look like a domain.
+
 ### An example of the shape
 
 > I came in wanting to run a preprocessing pipeline on ONDRI and assumed the

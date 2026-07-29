@@ -42,6 +42,7 @@ project:
           - file: cohort2/trishna_saha_detroja.md
           - file: cohort2/emmanuelle_renauld.md
           - file: cohort2/sima_abbasi.md
+          - file: cohort2/arman_hassanpour.md
 
     - title: Research Governance
       children:
